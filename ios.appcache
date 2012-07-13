@@ -1,0 +1,36 @@
+CACHE MANIFEST
+# 2011-02-15:v1.2
+
+# Explicitly cached 'master entries'.
+CACHE:
+css/ios/main.css
+css/ios/ipad.css
+css/ios/add2home.css
+css/jquery.mobile-1.0.1.min.css
+css/images/ajax-loader.png
+css/images/icons-18-black.png
+css/images/icons-18-white.png
+css/images/icons-36-black.png
+css/images/icons-36-white.png
+js/add2home.js
+js/jquery.js
+js/jquery.mobile-1.0.1.min.js
+js/ios.js
+img/classy_fabric.png
+img/ios/step0.png
+img/ios/step1.png
+img/ios/step2.png
+img/ios/step3.png
+img/ios/step4.png
+img/ios/step5.png
+img/ios/step6.png
+img/ios/step7.png
+img/ios/step8.png
+img/ios/step9.png
+img/ios/step10.png
+img/triangle.png
+
+# Resources that require the user to be online.
+NETWORK:
+index.php/api/journey/numcheck
+index.php/api/journey/user

@@ -1,0 +1,11 @@
+/* CSS Document */
+select, #no_change, #yes_ready {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+}
+#no_change, #yes_ready {
+	padding:3px;
+}
+#close {
+	display:block;
+}

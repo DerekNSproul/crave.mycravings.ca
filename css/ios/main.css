@@ -1,0 +1,86 @@
+/* CSS Document */
+* {
+	margin:0;
+	padding:0;
+}
+
+.nothome, .ipad {
+	display:none;
+}
+div[data-role=page] {
+	background-image: linear-gradient(bottom, rgb(255,205,7) 4%, rgb(255,231,113) 52%);
+	background-image: -o-linear-gradient(bottom, rgb(255,205,7) 4%, rgb(255,231,113) 52%);
+	background-image: -moz-linear-gradient(bottom, rgb(255,205,7) 4%, rgb(255,231,113) 52%);
+	background-image: -webkit-linear-gradient(bottom, rgb(255,205,7) 4%, rgb(255,231,113) 52%);
+	background-image: -ms-linear-gradient(bottom, rgb(255,205,7) 4%, rgb(255,231,113) 52%);
+	
+	background-image: -webkit-gradient(
+		linear,
+		left bottom,
+		left top,
+		color-stop(0.04, rgb(255,205,7)),
+		color-stop(0.52, rgb(255,231,113))
+	);
+}
+.ss {
+	margin:0;
+	padding:0;
+}
+.ui-field-contain {
+	margin:0;
+	padding:0;	
+}
+.ui-br {
+	border:0;
+}
+.ss .ui-btn-text {
+	font-size:12px;
+}
+.img {
+	margin-bottom:10px;
+	width:100%;
+}
+.box {
+	padding:20px;
+	margin:20px;
+	border-radius:10px;
+	background-color:rgba(255,255,255,0.3);
+}
+#step_seven_box .ui-controlgroup {
+	padding:0;
+	margin:0;	
+}
+#step_seven_box .ui-btn-text {
+	font-size: 12px;
+}
+#step_seven_box .ui-btn-inner {
+	padding:.5em 10px;	
+}
+#step_seven_box .ui-select {
+	display:block !important;
+	width:100% !important;
+}
+#step_seven_box .ui-input-text {
+	display:block !important;
+	width:97% !important;
+	margin-bottom:5px;
+}
+#step_zero {
+	background:url(../../img/classy_fabric.png);	
+}
+#step_zero_box {
+	background:#fff;
+}
+#tnc {
+	height:200px;
+	text-align:justify;
+	font-size:80%;
+	padding-bottom:10px;
+}
+#tnc p {
+	margin-bottom:13px;
+}
+#tnc li {
+	margin-left:15px;
+	margin-bottom:5px;
+}

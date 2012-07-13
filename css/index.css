@@ -1,0 +1,420 @@
+/* CSS Document */
+* {
+	margin:0;
+	padding:0;
+}
+body {
+	background:#000 url(../img/classy_fabric.png) repeat;
+	font-family:Century Gothic, Arial, Helvetica, sans-serif;
+}
+.box {
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	margin-top: -175px;
+	margin-left: -480px;
+}
+.container {
+	width:960px;
+	height:350px;
+	overflow: hidden;
+	position:relative;
+}
+.container, .footer {
+    user-select: none;
+   -o-user-select:none;
+   -moz-user-select: none;
+   -khtml-user-select: none;
+   -webkit-user-select: none;
+	cursor:default;
+}
+.footer {
+	color:#999;
+	margin-top:5px;
+	width:960px;
+	font-size:10px;
+	text-transform:uppercase;
+	text-align:right;
+	line-height:26px;
+}
+#navleft {
+	opacity:0.5;
+	left:0;
+	height:350px;
+	width:93px;
+	background:#fff url(../img/left.jpg) right no-repeat;
+	position:absolute;
+	cursor:pointer;
+	display:none;
+}
+#navright {
+	right:0;
+	height:350px;
+	width:93px;
+	background:#fff url(../img/right.jpg) right no-repeat;
+	position:absolute;
+	cursor:pointer;
+}
+.navcounter {
+	background-color:rgba(68, 68, 68,0.5);
+	color:#888;
+	font-size:10px;
+	margin-right:5px;
+	float:left;
+	padding:5px;
+	width:10px;
+	height:12px;
+	text-align:center;
+	cursor:default;
+}
+.active {
+	background-color:rgba(102, 102, 102,0.6);
+	color:#CCC;
+	cursor:pointer;
+}
+#stagename {
+	color:#ccc;
+	margin-right:5px;
+	font-size:10px;
+	float:left;
+	padding:5px;
+	height:12px;
+	text-transform:uppercase;
+	cursor:default;
+	background:none;
+}
+.selected {
+	background-color:#ffcd03;
+	color:#333333;
+}
+#slider {
+	height: 322px;
+	width: 8125px;
+	left:0;
+	position:absolute;
+	background:#fff url(http://s3.amazonaws.com/GodMedia/step-one-copy.jpg) no-repeat;
+	-webkit-background-size: 8025px 322px;
+}
+#navstage {
+	width:958px;
+	height:28px;	
+}
+#cravemost {
+	position:absolute;
+	left:1622px;
+	top:182px;
+	width:560px;
+	height:90px;
+	font-family:Verdana, Geneva, sans-serif;
+}
+#cravemost input {
+    display: inline;
+}
+
+#cellphone {
+	position:absolute;
+	left:5697px;
+	top:159px;
+	width:370px;
+	height:30px;
+	border:1px solid #FC0;
+	font-family:Verdana, Geneva, sans-serif;
+	font-size:20px;
+	outline:none;
+	padding-right:5px;
+	padding-top:8px;
+	text-align:right;
+}
+
+#email-label {
+	position:absolute;
+	display: block;
+	left:5697px;
+	top:229px;
+	width:370px;
+	height:30px;
+	text-align: right;
+	font-size: 19px;
+}
+#email {
+	position:absolute;
+	left:5697px;
+	top:253px;
+	width:370px;
+	height:30px;
+	border:1px solid #FC0;
+	font-family:Verdana, Geneva, sans-serif;
+	font-size:20px;
+	outline:none;
+	padding-right:5px;
+	padding-top:8px;
+	text-align:right;
+}
+#cellphone_confirm {
+	position: absolute;
+	left: 5837px;
+	top: 240px;
+	width: 229px;
+	height: 81px;
+	background: url(../img/mynumber.png) no-repeat;
+	font-family: Verdana, Geneva, sans-serif;
+	font-size: 20px;
+	outline: none;
+	padding-top: 35px;
+	text-align: right;
+	padding-right: 13px;
+}
+#yes_ready {
+	margin-left:5px;
+}
+#magazine {
+	line-height:25px;
+	position:absolute;
+	left:2600px;
+	top:142px;
+}
+#magazine label {
+	font-size:15px;
+	margin-left:5px;
+}
+#journey {
+	line-height:25px;
+	position:absolute;
+	left:3495px;
+	top:133px;
+}
+#journey label {
+	font-size:13px;
+	margin-left:5px;
+}
+#interest {
+	position:absolute;
+	left:4258px;
+	top:219px;
+	width:375px;
+}
+#interest-number {
+	position:absolute;
+	left: 4665px;
+	top: 215px;
+	font-size: 20px;
+}
+.ui-slider-handle {
+	outline:none;
+}
+#you {
+	line-height: 25px;
+	position: absolute;
+	left: 4950px;
+	top: 129px;
+	font-size:12px;
+}
+#you textarea {
+	margin-left:5px;
+	height: 14px;
+	width:105px;
+	border: 1px solid #FC0;
+	font-family: Verdana, Geneva, sans-serif;
+	font-size: 10pt;
+	outline: none;
+	padding: 5px;
+	border-image: initial;
+}
+#you input[type=radio] {
+	margin-right:3px;
+	margin-left:5px;
+}
+#you select {
+	margin-left:5px;
+	margin-top:2px;
+	margin-bottom:5px;
+	display:block;
+}
+.error {
+	color:#fff;
+	font-size:12px;
+	width:400px;
+	background:url(../img/triangle.png) top right no-repeat;
+	padding-top:10px;
+	height:22px;
+	position:absolute;
+	display:none;
+	z-index: 101;
+}
+.msg {
+	background-color:#FF0033;
+	text-align:right;
+	padding:8px;
+	float:right;
+}
+.msg strong {
+	text-transform:uppercase;
+}
+#cravemost-error {
+	top:252px;
+	left:1712px;
+}
+#spirit {
+	top:252px;
+	left:3352px;
+}
+#detail {
+	top:262px;
+	left:5275px;
+	background:none;
+}
+#contact-error {
+	top:252px;
+	left:5675px;
+	
+}
+#slidererr {
+	top:252px;
+	left:4250px;
+	background:url(../img/triangle.png) top left no-repeat;
+}
+#slidererr .msg {
+	float:left;
+}
+.btn_footer {
+	background:rgba(34, 34, 34, 0.5) url(../img/icon-reload.png) 5px center no-repeat;
+	float:left;
+	height: 16px;
+	padding:5px;
+	padding-left:21px;
+	padding-right:8px;
+	line-height:16px;
+	cursor:pointer;
+	display:none;
+}
+#close {
+	background:rgba(34, 34, 34, 0.5) url(../img/close.png) 5px center no-repeat;
+	float:left;
+	height: 16px;
+	padding:5px;
+	padding-left:21px;
+	padding-right:8px;
+	margin-top:4px;
+	line-height:16px;
+	cursor:pointer;
+	color: #999;
+	font-size: 10px;
+	text-transform: uppercase;
+	display:none;
+}
+#go {
+	background:rgba(34, 34, 34, 0.5) url(../img/go.png) 5px center no-repeat;
+	height: 12px;
+	padding:5px;
+	padding-left:21px;
+	padding-right:8px;
+	line-height:12px;
+	cursor:pointer;
+	color: #fff;
+	font-size: 10px;
+	text-transform: uppercase;
+	position:absolute;
+	left:333px;
+	top:225px;
+}
+#white {
+	background:#fff;
+	width:550px;
+	height:50px;
+	position:absolute;
+	right:110px;
+	top:255px;	
+}
+.footer a {
+	border-bottom:1px dotted #aaa;
+	color:#777;
+}
+.footer a:hover {
+	color:#999;
+	cursor:pointer;	
+}
+#overlay {
+	background:rgba(34, 34, 34, 0.5);
+	position:fixed;
+	top:0;
+	bottom:0;
+	left:0;
+	right:0;
+	display:none;	
+}
+#termsbox {
+	display:none;
+}
+#tnc {
+	background:#fff;
+	overflow:auto;
+	position:absolute;
+	top:28px;
+	bottom:0;
+	left:0;
+	right:0;
+	font-size:80%;
+	text-align:justify;
+	padding:20px;
+}
+#tnc p {
+	padding-bottom:20px;	
+}
+#tnc li {
+	margin-left:20px;
+	margin-top:5px;
+	margin-bottom:5px;
+}
+#campusbox {
+	position:absolute;
+	top:28px;
+	bottom:0;
+	left:0;
+	right:0;
+	background:url(../img/campus.png);
+}
+#campussel {
+	position:absolute;
+	right:580px;
+	top:200px;
+}
+#campusbox .ui-combobox {
+	position:absolute;
+	right:580px;
+	top:200px;
+}
+textarea {
+	resize:none;
+	overflow:hidden;	
+}
+
+/* For the combo box widget */
+	.ui-combobox {
+		position: relative;
+		display: inline-block;
+	}
+	.ui-button {
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		margin-left: -1px;
+		padding: 0;
+		/* adjust styles for IE 6/7 */
+		*height: 1.7em;
+		*top: 0.1em;
+	}
+    #campusbox input {
+        padding: 0;
+        color: black;
+        font-weight: normal;
+        font-size: 12pt;
+        width: 254px;
+        height: 18px;
+		margin: 0;
+    }
+    .ui-autocomplete .ui-menu-item {
+        font-size: 12pt;
+    }
+    .ui-combobox a {
+    
+    }

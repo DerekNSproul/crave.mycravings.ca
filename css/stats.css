@@ -1,0 +1,72 @@
+/* CSS Document */
+@font-face {
+    font-family: 'AaarghNormal';
+    src: url('Aaargh-webfont.eot');
+    src: url('Aaargh-webfont.eot?#iefix') format('embedded-opentype'),
+         url('Aaargh-webfont.woff') format('woff'),
+         url('Aaargh-webfont.ttf') format('truetype'),
+         url('Aaargh-webfont.svg#AaarghNormal') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+* {
+	padding:0;
+	margin:0;
+}
+body {
+	background:url(../img/classy_fabric.png);
+	padding-top:20px;
+	font-family:'AaarghNormal', Helvetica, Arial, sans-serif
+}
+#header {
+	background:url(../img/stats_head.png) no-repeat;
+	width:960px;
+	height:82px;
+	position:absolute;
+	left:50%;
+	margin-left:-480px;
+	top:45%;
+}
+h3 {
+	font-weight:normal;
+	text-transform:uppercase;
+	font-size:100%;	
+}
+.container {
+	border-radius: 5px;
+	background:#fff;
+	width: 940px;
+	height:400px;
+	padding:10px;
+	margin: 0 auto;
+	margin-top:65px;
+	display:none;
+}
+.explanation {
+	border-radius: 5px;
+	height:360px;
+	width:320px;
+	background:#f6f6f6;
+	padding:20px;
+	color:#444;
+	text-align:center;
+}
+#gender {
+	float:right;	
+}
+table {
+	font-size:12px;
+	margin:0 auto;
+}
+td {
+	padding:10px;
+	border-bottom:1px #999 solid;	
+}
+th {
+	text-align:left;
+	padding:10px;
+	border-bottom:1px #444 solid;	
+}
