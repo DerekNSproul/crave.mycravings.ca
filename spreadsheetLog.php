@@ -75,7 +75,7 @@ class SpreadsheetLogger
         // Provide spreadsheet key and worksheet ID
         // Key can be obtained from the spreadsheet URL
         // Worksheet ID is a bit harder.
-        $this->currKey = 'topbabkxhwKhX-YfGwGZlaA';  // 'Connect log file'
+        $this->currKey = '0AhXawWocmC2qdFRMSmxkczh5NE5COUxBZE9zZmNXRmc';  // 'Connect log file'
         $this->currWkshtId = 'od6';
         $this->arguments = $arguments;
     }
