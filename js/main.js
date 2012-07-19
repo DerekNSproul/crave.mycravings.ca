@@ -453,7 +453,7 @@ function submit_survey() {
 			number : $('#cellphone').val(),
 
 			cravemost : $('#cravemost input:checked').val(),
-			journey : $('input[name=sj]:checked').val(),
+			spiritual : $('input[name=sj]:checked').val(),
 			interest : $( "#interest-number" ).text(),
 			// Magazine name
 			magazine: $('#magazine input:checked').val(),
