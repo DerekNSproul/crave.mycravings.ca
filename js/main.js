@@ -447,7 +447,7 @@ function submit_survey() {
 		{
 			fname :$('#fname').val(),
 			lname :$('#lname').val(),
-			gender : $('input[name=gender]:checked').val(),
+			gender : $('#gender input:checked').val(),  //('input[name=gender]:checked').val(),
 
 			email: $('#email').val(),
 			number : $('#cellphone').val(),
