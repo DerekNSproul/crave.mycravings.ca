@@ -22,7 +22,7 @@ class Journey extends REST_Controller
 		$this->form_validation->set_rules('spiritual', 'Spiritual Journey', 'required');
 		$this->form_validation->set_rules('interest', 'Interest', 'required');
 		$this->form_validation->set_rules('gender', 'Gender', 'required');
-		$this->form_validation->set_rules('major', 'Area of Study', 'required');
+		$this->form_validation->set_rules('major', 'Area of Study', 'required');	// CHANGE 'Area of Study' to 'Major'?
 		$this->form_validation->set_rules('campus', 'Campus', 'required|campus_validation');
 		$this->form_validation->set_rules('international', 'International', 'required');
 		$this->form_validation->set_rules('number', 'Phone', 'required');
