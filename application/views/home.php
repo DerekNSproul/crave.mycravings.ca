@@ -183,123 +183,88 @@ var base_url = "<?php echo base_url(); ?>";
     <div class="container">
       <div id="campusbox">
         <select id="campussel">
-          <option value="">Choose your Campus</option>
-<option>Australian Defence Force Academy</option>
-<option>Australian Film, Television, and Radio School</option>
-<option>Australian Maritime College</option>
-<option>Avondale College</option>
-<option>Bachelor Institute of Indigenous Tertiary Education</option>
-<option>Bond University</option>
-<option>Brock University</option>
-<option>Carleton University</option>
-<option>C&eacute;gep Fran&ccedil;ois-Xavier-Garneau</option>
-<option>C&eacute;gep St. Lawrence</option>
-<option>C&eacute;gep Ste-Foy</option>
-<option>Centennial College</option>
-<option>Central Queensland University</option>
-<option>Charles Darwin University</option>
-<option>Charles Sturt University</option>
-<option>Christian Heritage College</option>
-<option>College of the Rockies</option>
-<option>Concordia University</option>
-<option>Curtin University of Technology</option>
-<option>Dalhousie University</option>
-<option>Deakin University (Geelong)</option>
-<option>Edith Cowan University</option>
-<option>Fanshawe College</option>
-<option>George Brown College</option>
-<option>Grant MacEwan University</option>
-<option>Griffith University</option>
-<option>Humber College</option>
-<option>James Cook University</option>
-<option>La Trobe University</option>
-<option>Lakehead University</option>
-<option>Langara College</option>
-<option>LINC</option>
-<option>Macquarie University</option>
-<option>McGill University</option>
-<option>McMaster University</option>
-<option>Melbourne College of Divinity</option>
-<option>Melbourne University</option>
-<option>Mohawk College</option>
-<option>Monash University - Caulfield</option>
-<option>Monash University - Clayton</option>
-<option>Mount Allison University</option>
-<option>Mount Royal University</option>
-<option>Murdoch University</option>
-<option>National Institute of Dramatic Art</option>
-<option>National Office</option>
-<option>Ontario College of Art & Design</option>
-<option>Other</option>
-<option>Queen's University</option>
-<option>Queensland University of Technology</option>
-<option>Regional / National</option>
-<option>Royal Melbourne Institute of Technology</option>
-<option>Ryerson University</option>
-<option>Saint Mary's University</option>
-<option>Seneca College</option>
-<option>Sheridan College</option>
-<option>Simon Fraser University</option>
-<option>Simon Fraser University - Surrey</option>
-<option>Southern Cross University</option>
-<option>Swinburne University of Technology</option>
-<option>Sydney University (Cumberland campus)</option>
-<option>Sydney University (Main campus - Camperdown)</option>
-<option>Tabor College</option>
-<option>The Australian National University</option>
-<option>The Flinders University of South Australia</option>
-<option>The University of Adelaide</option>
-<option>The University of Notre Dame Australia</option>
-<option>The University of Western Australia</option>
-<option>Trent University</option>
-<option>Trinity Western University</option>
-<option>Universit&eacute; de Montreal</option>
-<option>Universit&eacute; de Sherbrooke</option>
-<option>Universit&eacute; du Qu&eacute;bec &agrave; Montr&eacute;al</option>
-<option>Universit&eacute; du Qu&eacute;bec &agrave; Qu&eacute;bec</option>
-<option>Universit&eacute; du Qu&eacute;bec &agrave; Rimouski</option>
-<option>Universit&eacute; Laval</option>
-<option>University of Alberta</option>
-<option>University of Alberta - Augustana</option>
-<option>University of Alberta - Faculty Saint-Jean</option>
-<option>University of Ballarat</option>
-<option>University of British Columbia</option>
-<option>University of British Columbia - Okanagan</option>
-<option>University of Calgary</option>
-<option>University of Canberra</option>
-<option>University of Guelph</option>
-<option>University of Manitoba</option>
-<option>University of New Brunswick - Fredericton</option>
-<option>University of New Brunswick - Saint John</option>
-<option>University of New England</option>
-<option>University of New South Wales</option>
-<option>University of Newcastle</option>
-<option>University of Ontario Institute of Technology</option>
-<option>University of Ottawa</option>
-<option>University of Queensland</option>
-<option>University of Regina</option>
-<option>University of Saskatchewan</option>
-<option>University of South Australia</option>
-<option>University of Southern Queensland</option>
-<option>University of Tasmania</option>
-<option>University of Technology Sydney</option>
-<option>University of the Sunshine Coast</option>
-<option>University of Toronto</option>
-<option>University of Toronto - Mississauga</option>
-<option>University of Toronto - Scarbourough</option>
-<option>University of Victoria</option>
-<option>University of Waterloo</option>
-<option>University of Waterloo School of Pharmacy</option>
-<option>University of Western Ontario</option>
-<option>University of Western Sydney</option>
-<option>University of Windsor</option>
-<option>University of Wollongong</option>
-<option>Unknown</option>
-<option>Victoria University of Technology</option>
-<option>Wilfrid Laurier University</option>
-<option>Wilfrid Laurier University - Brantford</option>
-<option>York University</option>
-<option>York University - Glendon</option>
+          <option value="" selected="selected">Choose One</option>
+<option value="Acadia University - Wolfville">Acadia University - Wolfville</option>
+<option value="Algonquin College">Algonquin College</option>
+<option value="Bishops University - Lennoxville-Sherbrooke">Bishops University - Lennoxville-Sherbrooke</option>
+<option value="Brock University">Brock University</option>
+<option value="Carleton University">Carleton University</option>
+<option value="Cégep Dawson">Cégep Dawson</option>
+<option value="Cégep François-Xavier-Garneau">Cégep François-Xavier-Garneau</option>
+<option value="Cégep St. Lawrence">Cégep St. Lawrence</option>
+<option value="Cégep St. Limoilou">Cégep St. Limoilou</option>
+<option value="Cégep Ste-Foy">Cégep Ste-Foy</option>
+<option value="Centennial College">Centennial College</option>
+<option value="College of the Rockies">College of the Rockies</option>
+<option value="Concordia University">Concordia University</option>
+<option value="Conestoga College">Conestoga College</option>
+<option value="Dalhousie University">Dalhousie University</option>
+<option value="Fanshawe College">Fanshawe College</option>
+<option value="George Brown College">George Brown College</option>
+<option value="Grant MacEwan University">Grant MacEwan University</option>
+<option value="Humber College">Humber College</option>
+<option value="Lakehead University">Lakehead University</option>
+<option value="Lakehead University - Orillia">Lakehead University - Orillia</option>
+<option value="Langara College">Langara College</option>
+<option value="Laurentian University - Sudbury">Laurentian University - Sudbury</option>
+<option value="McGill University">McGill University</option>
+<option value="McMaster University">McMaster University</option>
+<option value="Memorial University">Memorial University</option>
+<option value="Mohawk College">Mohawk College</option>
+<option value="Mount Allison University">Mount Allison University</option>
+<option value="Mount Royal University">Mount Royal University</option>
+<option value="Niagara College - Welland Campus">Niagara College - Welland Campus</option>
+<option value="Nipissing University">Nipissing University</option>
+<option value="Ontario College of Art &amp; Design">Ontario College of Art &amp; Design</option>
+<option value="Queen's University">Queen's University</option>
+<option value="Ryerson University">Ryerson University</option>
+<option value="Saint Mary's University">Saint Mary's University</option>
+<option value="Seneca College">Seneca College</option>
+<option value="Sheridan College - Brampton">Sheridan College - Brampton</option>
+<option value="Sheridan College - Oakville">Sheridan College - Oakville</option>
+<option value="Simon Fraser University">Simon Fraser University</option>
+<option value="Simon Fraser University - Surrey">Simon Fraser University - Surrey</option>
+<option value="St. Francis Xavier - Antigonish">St. Francis Xavier - Antigonish</option>
+<option value="Trent University">Trent University</option>
+<option value="Trent University - Oshawa">Trent University - Oshawa</option>
+<option value="Trinity Western University">Trinity Western University</option>
+<option value="Universite de Montreal">Universite de Montreal</option>
+<option value="Universite de Sherbrooke">Universite de Sherbrooke</option>
+<option value="Universite du Quebec">Universite du Quebec</option>
+<option value="Université du Québec à Montréal">Université du Québec à Montréal</option>
+<option value="Université du Québec à Rimouski">Université du Québec à Rimouski</option>
+<option value="Université du Québec à Trois-Rivières">Université du Québec à Trois-Rivières</option>
+<option value="Université du Québec en Outaouais">Université du Québec en Outaouais</option>
+<option value="Universite Laval">Universite Laval</option>
+<option value="University of Alberta">University of Alberta</option>
+<option value="University of Alberta - Augustana">University of Alberta - Augustana</option>
+<option value="University of Alberta - Faculty Saint-Jean">University of Alberta - Faculty Saint-Jean</option>
+<option value="University of British Columbia">University of British Columbia</option>
+<option value="University of British Columbia - Okanagan">University of British Columbia - Okanagan</option>
+<option value="University of Calgary">University of Calgary</option>
+<option value="University of Guelph">University of Guelph</option>
+<option value="University of Manitoba">University of Manitoba</option>
+<option value="University of New Brunswick - Fredericton">University of New Brunswick - Fredericton</option>
+<option value="University of New Brunswick - Saint John">University of New Brunswick - Saint John</option>
+<option value="University of Ontario Institute of Technology">University of Ontario Institute of Technology</option>
+<option value="University of Ottawa">University of Ottawa</option>
+<option value="University of Regina">University of Regina</option>
+<option value="University of Saskatchewan">University of Saskatchewan</option>
+<option value="University of the Fraser Valley">University of the Fraser Valley</option>
+<option value="University of Toronto">University of Toronto</option>
+<option value="University of Toronto - Mississauga">University of Toronto - Mississauga</option>
+<option value="University of Toronto - Scarbourough">University of Toronto - Scarbourough</option>
+<option value="University of Victoria">University of Victoria</option>
+<option value="University of Waterloo">University of Waterloo</option>
+<option value="University of Waterloo School of Pharmacy">University of Waterloo School of Pharmacy</option>
+<option value="University of Western Ontario">University of Western Ontario</option>
+<option value="University of Windsor">University of Windsor</option>
+<option value="University of Winnipeg">University of Winnipeg</option>
+<option value="Wilfrid Laurier University">Wilfrid Laurier University</option>
+<option value="Wilfrid Laurier University - Brantford">Wilfrid Laurier University - Brantford</option>
+<option value="York University">York University</option>
+<option value="York University - Glendon">York University - Glendon</option>
+<option value="Other">Other</option>
         </select>
         <div id="go">Go</div>
       </div>
