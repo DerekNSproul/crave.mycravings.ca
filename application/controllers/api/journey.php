@@ -55,12 +55,12 @@ class Journey extends REST_Controller
 				3540 => $this->post('magazine'),
 				3542 => $this->post('spiritual'),
 				3541 => $interest, 
-				2523 => $this->post('major'),
+				//2523 => $this->post('major'),
 				//6 => $this->post('year'), 
 				3545 => $this->post('residence'), 
-				3547 => $this->post('international')
+				3547 => $this->post('international'),
 				//3549 => $this->post('gender'), 
-				//3548 => $this->post('campus') 
+				3548 => $this->post('campus') 
 			);
 			
 			$person = array (
