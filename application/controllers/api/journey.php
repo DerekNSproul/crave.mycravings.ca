@@ -56,7 +56,7 @@ class Journey extends REST_Controller
 				3542 => $this->post('spiritual'),
 				3541 => $interest, 
 				2523 => $this->post('major'),
-				6 => $this->post('year'), 
+				//6 => $this->post('year'), 
 				3545 => $this->post('residence'), 
 				3547 => $this->post('international'),
 				3549 => $this->post('gender'), 
@@ -67,7 +67,9 @@ class Journey extends REST_Controller
 				'firstName' => ucwords(strtolower($this->post('fname'))),
 				'lastName' => ucwords(strtolower($this->post('lname'))),
 				'email' => $this->post('email'),
-				'phone_number' => $this->post('number')
+                                'yearInSchool' => $this->post('year'), 
+				'phone_number' => $this->post('number'),
+                                'campus' => $this->post('campus')
 			);
 				
 			//$this->load->model('Journey_data', '', TRUE);
