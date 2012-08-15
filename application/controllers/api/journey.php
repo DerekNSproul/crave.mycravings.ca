@@ -58,9 +58,9 @@ class Journey extends REST_Controller
 				2523 => $this->post('major'),
 				//6 => $this->post('year'), 
 				3545 => $this->post('residence'), 
-				3547 => $this->post('international'),
-				3549 => $this->post('gender'), 
-				3548 => $this->post('campus') 
+				3547 => $this->post('international')
+				//3549 => $this->post('gender'), 
+				//3548 => $this->post('campus') 
 			);
 			
 			$person = array (
@@ -69,6 +69,8 @@ class Journey extends REST_Controller
 				'email' => $this->post('email'),
                                 'yearInSchool' => $this->post('year'), 
 				'phone_number' => $this->post('number'),
+                                'major' => $this->post('major'),
+                                'gender' => $this->post('gender'),
                                 'campus' => $this->post('campus')
 			);
 				

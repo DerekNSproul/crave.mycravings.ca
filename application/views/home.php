@@ -120,9 +120,9 @@ var base_url = "<?php echo base_url(); ?>";
           <textarea id="lname" placeholder="Last" maxlength="17"></textarea>
           <br />
           <div id="gender"> <!-- ADDED Aug 7, 2012 -->
-	          <input type="radio" id="male" name="gender" value="male" />
+	          <input type="radio" id="male" name="gender" value="Male" />
 	          <label for="male">Male</label>
-	          <input type="radio" id="female" name="gender" value="female" />
+	          <input type="radio" id="female" name="gender" value="Female" />
 	          <label for="female"> Female</label>
 	      </div>
           <br />
