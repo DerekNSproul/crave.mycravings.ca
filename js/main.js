@@ -27,15 +27,12 @@ $(document).ready(function() {
 	$('.navcounter').first().addClass('selected active');
 	obj = $('#slider');
 	
-	$(document).keyup(function(e) {
-        if (e.keyCode == 13 && mode < 8 && $('#overlay:visible').length == 0)
-			move(true, false);
-    }).keydown(function(e){
+	$(document).keyup(function(e) {}).keydown(function(e){
 		if (e.keyCode == 13)
 			e.preventDefault();
 	});
 	
-
+/*
     // Initialize combo box widget functionality
     $.widget( "ui.combobox", {
         _create: function() {
@@ -142,9 +139,9 @@ $(document).ready(function() {
             $.Widget.prototype.destroy.call( this );
         }
     });
-
+*/
     // Activate the campus select combo box widget
-    $( "#campussel" ).combobox();
+ //   $( "#campussel" ).combobox();
 
     //// The one thing I crave the most is...
 	// User clicked on the "other" textbox itself
@@ -232,113 +229,9 @@ $(document).ready(function() {
 			}
 	});
 	$( "#interest-number" ).text('0');
-	$('#terms').click(function() {
-		$('#terms, #reload, #break').fadeOut();
-		$('#close').show();	
-		$('#overlay').fadeIn(function() {
-			if (app) {
-				$('#termsbox').fadeIn();
-			} else {
-				$('#termsbox').slideDown(function() {
-					
-				});
-			}
-		});
-	});
-	
-	/*
-	// This probably should not need to happen since we are not doing cellphone number checking
-	$('#reverify').click(function() {
-		$('#reverify').fadeOut();
-		$.post(base_url + 'index.php/api/journey/numcheck', {
-				num : $('#cellphone').val()
-		}, function(data) {
-			$('#cellphone').attr('disabled', false);
-			if(data.exists) {
-				$('#contact-error').fadeIn(200).css('top','182px').children('.msg').html('<strong>Sorry it seems you\'ve already got some Jandals!</strong><br />If this is wrong come see us at our tables' );
-				$('#navright').fadeOut();
-				if (app) {
-					setTimeout(reset_page, 5000);
-				}
-			} else {
-				obj.stop().animate({left: -6086},500);
-				$('#navstage').children().fadeOut(500);
-				$('#navleft, #navright').fadeOut(500);
-				$('#terms, #break').fadeOut();
-				submit_survey();
-			}
-		}, "json").error(function () {
-			$('#reverify').fadeIn();
-		});
-	});
-    */
-
-    // Close the "Terms & Conditions" box
-	$('#close').click(function() {
-		if (app) {
-			$('#termsbox').fadeOut(function() {
-				$('#overlay').fadeOut();
-			});
-		} else {
-			$('#termsbox').slideUp(function() {
-				$('#overlay').fadeOut();
-			});
-		}
-		$('#terms, #break').fadeIn();
-		if(mode != 0 && mode < 8)
-			$('#reload').fadeIn();
-	});
+        
 	$('#resubmit').click(submit_survey);
-	
-    // Click on GO after selecting campus
-	$('#go').click(function() {
-		if ($('#campussel').get(0).selectedIndex > 0) {
-			$('#overlay, #campus').fadeOut();
-    		$('#magazine').css('top','142px');
-		}
-	});
-	
-	/*
-	
-	// NZ's cellphone confirmation & server side validation
-	
-	$('#no_change').click(function() {
-		$('#cellphone_confirm').fadeOut();
-		$('#cellphone').attr('disabled', false);
-	});
-	
-	$('#yes_ready').click(function() {
-		$('#cellphone_confirm').fadeOut();
-		
-		$.post(base_url + 'index.php/api/journey/numcheck', {
-				num : $('#cellphone').val()
-		}, function(data) {
-			$('#cellphone').attr('disabled', false);
-			if (data.exists) {
-				$('#cellphone').fadeOut(100);
-				$('#cell').fadeIn(200).css('top','182px').children('.msg').html(
-					'<strong>Sorry it seems you\'ve already got some Jandals!</strong><br />If this is wrong come see us at our tables'
-				);
-				$('#navright').fadeOut();
-				if (app) {
-					setTimeout(reset_page, 5000);
-				}
-			} else {
-				obj.stop().animate({left: -6086},500);
-				$('#navstage').children().fadeOut(500);
-				$('#navleft, #navright').fadeOut(500);
-				$('#terms, #break').fadeOut();
-				submit_survey();
-			}
-		}, "json").error(function () {
-			$('#reverify').fadeIn();
-		});
-	});
-	*/
-    
-    // Reveal the main interface
-	$('#overlay, #campus').show();
-	$('textarea').hide();
+        
 });
 
 function move(advance, selection) {
@@ -371,7 +264,10 @@ function move(advance, selection) {
 				break;
 			case 1:
 				$('#navleft').stop().fadeOut();
-				obj.stop().animate({left: -460},500);
+				$("#campusbox select").show();
+				$('#stagename').text('Your Campus');
+				obj.stop().animate({left: -950},500);
+				$('#navstage').children().fadeIn();
 				break;
 			case 2:
 			 // The one thing I crave most is
@@ -379,47 +275,48 @@ function move(advance, selection) {
 				$("#cravemost input").show();
 				$('#cravemost').stop().show();
 				$('#stagename').text('Crave Most');
-				obj.stop().animate({left: -1470},500,function() {
+				obj.stop().animate({left: -1900},500,function() {
 					//$('#coolest').focus();
 				});
-				$('#navstage').children().fadeIn();
 				break;
 			case 3:
 				$('#cravemost').fadeOut(500);
 				$('#stagename').text('Our Magazine');
 				$('#magazine input').stop().show();
-				obj.stop().animate({left: -2170},500,function() {
+				obj.stop().animate({left: -2850},500,function() {
 					$('#magchk').focus();
 				});
 				break;
 			case 4:
-				$('#stagename').text('Your Spiritual Journey');
-				$('input[name=sj]').stop().show();
-				obj.stop().animate({left: -2970},500,function() {
-					$('input[name=sj]:first').focus();
-				});
-				break;
-			case 5:
 				$('#stagename').text('Beginning Your Journey');
 				$('#jslide').stop().show();
-				obj.stop().animate({left: -3870},500);
+				obj.stop().animate({left: -3800},500);
+				break;
+			case 5:
+				$('#stagename').text('Your Spiritual Journey');
+				$('input[name=sj]').stop().show();
+				obj.stop().animate({left: -4750},500,function() {
+					$('input[name=sj]:first').focus();
+				});
 				break;
 			case 6:
 				$('#navstage').children().fadeOut();
 				$('#navleft').stop().fadeOut();
-				obj.stop().animate({left: -4830},500,function() {
+				obj.stop().animate({left: -5700},500,function() {
 					$('#name').focus();
 				});
 				$('#fname,#lname').stop().show();
-				$('#you input, #you select, #you textarea').stop().show();
-				break;
-			case 7:
-                $('#email').show();
+				$('#you input').stop().show();
+				$('#you select').stop().show();
+				$('#you textarea').stop().show();
+				$('#email').stop().show();
 				$('#cellphone, #yes_ready, #no_change').stop().show();
 				$('#cellphone').attr('disabled', false);
 				$('#cellphone_confirm').hide();
-				obj.stop().animate({left: -5240},500,function() {
-					$('#cellphone').focus();
+				break;
+			case 7:
+                $('#email').show();
+				obj.stop().animate({left: -6650},500,function() {
 				});
 				break;
 			case 8:
@@ -495,29 +392,29 @@ function reset_page() {
 	move(true, true);	
 }
 function validation() {
-	//return true; //DEBUG
+	return true; //DEBUG
 	switch(mode)
 	{
 		case 2:
-			if ($('#cravemost input:checked').val() == '') {
+/*			if ($('#cravemost input:checked').val() == '') {
 				$('#cravemost-error').fadeIn(200);
 				return false;
 			}
-			break;
+*/			break;
 		case 4:
-			if($('input[name=sj]:checked').length == 0){
+/*			if($('input[name=sj]:checked').length == 0){
 				$('#spirit').fadeIn(200);
 				return false;
 			}
-			break;
+*/			break;
 		case 5:
-			if($( "#interest-number" ).text() == '0'){
+/*			if($( "#interest-number" ).text() == '0'){
 				$('#slidererr').fadeIn(200);
 				return false;
 			}
-			break;
+*/			break;
 		case 6:
-			if($('#fname').val() == ''){
+/*			if($('#fname').val() == ''){
 				$('#deterr').text('Enter your First Name');
 				$('#detail').fadeIn(200);
 				return false;
@@ -542,9 +439,9 @@ function validation() {
 				$('#detail').fadeIn(200);
 				return false;
 			}
-			break;
+*/			break;
 		case 7:
-			var phone = /^[\d\(\)-]{7,14}$/;
+/*			var phone = /^[\d\(\)-]{7,14}$/;
 			if (!phone.test($('#cellphone').val())){
 				$('#contact-error').fadeIn(200).css('top','199px').children('.msg').html('<strong>Forgetting something?</strong> Type in a valid number');
 				return false;
@@ -554,7 +451,7 @@ function validation() {
 				$('#contact-error').fadeIn(200).css('top','291px').children('.msg').html('<strong>Forgetting something?</strong> Type in a valid email address');
 				return false;
 			}
-	}
+*/	}
 	$('.error').fadeOut(100);
 	return true;
 }

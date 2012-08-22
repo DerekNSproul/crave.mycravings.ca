@@ -4,8 +4,9 @@
 	padding:0;
 }
 body {
-	background:#000 url(../img/classy_fabric.png) repeat;
+	background:#000; /* url(../img/classy_fabric.png) repeat;*/
 	font-family:Century Gothic, Arial, Helvetica, sans-serif;
+        color: #FFF;
 }
 .box {
 	position: fixed;
@@ -89,41 +90,40 @@ body {
 }
 #slider {
 	height: 322px;
-	width: 8125px;
+	width: 7600px;
 	left:0;
 	position:absolute;
-	background:#fff url(http://s3.amazonaws.com/GodMedia/step-one-copy.jpg) no-repeat;
-	-webkit-background-size: 8025px 322px;
+	background:#fff url(http://campusforchrist.s3.amazonaws.com/mycravings/surveybkg.jpg) no-repeat;
+	-webkit-background-size: 7600px 322px;
 }
 #navstage {
-	width:958px;
+	width:950px;
 	height:28px;	
 }
 #cravemost {
 	position:absolute;
-	left:1622px;
-	top:182px;
+	left:2060px;
+	top:162px;
 	width:560px;
 	height:90px;
 	font-family:Verdana, Geneva, sans-serif;
+        font-weight: bold;
 }
 #cravemost input {
     display: inline;
 }
 
+#fname, #lname, #cellphone {
+    width: 175px;
+}
+
 #cellphone {
-	position:absolute;
-	left:5697px;
-	top:159px;
-	width:370px;
-	height:30px;
 	border:1px solid #FC0;
 	font-family:Verdana, Geneva, sans-serif;
-	font-size:20px;
 	outline:none;
 	padding-right:5px;
 	padding-top:8px;
-	text-align:right;
+	text-align:left;
 }
 
 #email-label {
@@ -135,20 +135,6 @@ body {
 	height:30px;
 	text-align: right;
 	font-size: 19px;
-}
-#email {
-	position:absolute;
-	left:5697px;
-	top:253px;
-	width:370px;
-	height:30px;
-	border:1px solid #FC0;
-	font-family:Verdana, Geneva, sans-serif;
-	font-size:20px;
-	outline:none;
-	padding-right:5px;
-	padding-top:8px;
-	text-align:right;
 }
 #cellphone_confirm {
 	position: absolute;
@@ -170,7 +156,7 @@ body {
 #magazine {
 	line-height:25px;
 	position:absolute;
-	left:2600px;
+	left:3071px;
 	top:142px;
 }
 #magazine label {
@@ -180,8 +166,8 @@ body {
 #journey {
 	line-height:25px;
 	position:absolute;
-	left:3495px;
-	top:133px;
+	left:4991px;
+	top:125px;
 }
 #journey label {
 	font-size:13px;
@@ -189,9 +175,10 @@ body {
 }
 #interest {
 	position:absolute;
-	left:4258px;
+	left:4058px;
 	top:219px;
 	width:375px;
+        height: 5px;
 }
 #interest-number {
 	position:absolute;
@@ -205,30 +192,48 @@ body {
 #you {
 	line-height: 25px;
 	position: absolute;
-	left: 4950px;
-	top: 129px;
+	left: 5995px;
+	top: 84px;
 	font-size:12px;
 }
 #you textarea {
 	margin-left:5px;
+	margin-bottom:5px;
 	height: 14px;
-	width:105px;
-	border: 1px solid #FC0;
+	width:163px;
+	border: 1px solid #777;
 	font-family: Verdana, Geneva, sans-serif;
 	font-size: 10pt;
 	outline: none;
 	padding: 5px;
 	border-image: initial;
 }
+
+#email {
+	width:346px;
+	margin-left:5px;
+	margin-bottom:5px;
+	height: 14px;
+	border: 1px solid #777;
+	font-family: Verdana, Geneva, sans-serif;
+	font-size: 10pt;
+	outline: none;
+	padding: 5px;
+	border-image: initial;
+}
+
+
 #you input[type=radio] {
 	margin-right:3px;
 	margin-left:5px;
 }
 #you select {
-	margin-left:5px;
-	margin-top:2px;
-	margin-bottom:5px;
+        width: 163px;
+        position: absolute;
+        top: 94px;
+        left: 180px;
 	display:block;
+        margin: 0 0 5px 10px;
 }
 .error {
 	color:#fff;
@@ -367,54 +372,20 @@ body {
 }
 #campusbox {
 	position:absolute;
-	top:28px;
+	top:92px;
 	bottom:0;
-	left:0;
+	left:1420px;
 	right:0;
-	background:url(../img/campus.png);
+	/*background:url(../img/campus.png);*/
 }
 #campussel {
-	position:absolute;
-	right:580px;
-	top:200px;
-}
-#campusbox .ui-combobox {
-	position:absolute;
-	right:580px;
-	top:200px;
+	font-family: Helvetica, sans-serif;
+        font-size: 12pt;
 }
 textarea {
 	resize:none;
 	overflow:hidden;	
 }
-
-/* For the combo box widget */
-	.ui-combobox {
-		position: relative;
-		display: inline-block;
-	}
-	.ui-button {
-		position: absolute;
-		top: 0;
-		bottom: 0;
-		margin-left: -1px;
-		padding: 0;
-		/* adjust styles for IE 6/7 */
-		*height: 1.7em;
-		*top: 0.1em;
-	}
-    #campusbox input {
-        padding: 0;
-        color: black;
-        font-weight: normal;
-        font-size: 12pt;
-        width: 254px;
-        height: 18px;
-		margin: 0;
-    }
-    .ui-autocomplete .ui-menu-item {
-        font-size: 12pt;
-    }
-    .ui-combobox a {
-    
-    }
+#debugmessage {
+    color: #FFF;
+}
