@@ -109,7 +109,7 @@ body {
 	font-family:Verdana, Geneva, sans-serif;
         font-weight: bold;
 }
-#cravemost input {
+#cravemost input[type=text] {
     display: inline;
     width: 140px;
 }
@@ -176,9 +176,9 @@ body {
 }
 #interest {
 	position:absolute;
-	left:4058px;
-	top:219px;
-	width:375px;
+	left:4068px;
+	top:200px;
+	width:340px;
         height: 5px;
 }
 #interest-number {
@@ -252,6 +252,10 @@ body {
 }
 .msg strong {
 	text-transform:uppercase;
+}
+#campus-error {
+	top:219px;
+	left:1112px;
 }
 #cravemost-error {
 	top:189px;

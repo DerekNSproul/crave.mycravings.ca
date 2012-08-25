@@ -400,6 +400,12 @@ function validation() {
 	//return true; //DEBUG
 	switch(mode)
 	{
+		case 1:
+			if ($('#campusbox select').val() == "") {
+				$('#campus-error').fadeIn(200);
+				return false;
+			}
+			break;
 		case 2:
 			if ($('#cravemost input:checked').val() == undefined) {
 				$('#cravemost-error').fadeIn(200);

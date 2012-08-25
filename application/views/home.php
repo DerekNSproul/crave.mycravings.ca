@@ -36,6 +36,9 @@ var base_url = "<?php echo base_url(); ?>";
     <form id="myform">
       <div id="slider">
         <!--<div id="white"></div>-->
+        <div id="campus-error" class="error">
+          <div class="msg"><strong>Forgetting something?</strong> Please make a selection</div>
+        </div>
         <div id="cravemost-error" class="error">
           <div class="msg"><strong>Forgetting something?</strong> Please make a selection</div>
         </div>
@@ -176,7 +179,7 @@ var base_url = "<?php echo base_url(); ?>";
           <label for="mag-love">love without conditions</label>
           <br />
           <input type="radio" name="mag" value="escape from the dreariness of life" id="mag-escape" />
-          <label for="mag-escape">escape from the dreariness of life</label>
+          <label for="mag-escape">escape from the dreariness of life</label>cravemost
           <br />
           <input type="radio" name="mag" value="achievement &amp; success" id="mag-success" />
           <label for="mag-success">achievement &amp; success</label>
