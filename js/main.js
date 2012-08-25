@@ -267,7 +267,7 @@ function move(advance, selection) {
 				$("#campusbox select").show();
 				$('#stagename').text('Your Campus');
 				obj.stop().animate({left: -950},500);
-				$('#navstage').children().fadeIn();
+				//$('#navstage').children().fadeIn();
 				break;
 			case 2:
 			 // The one thing I crave most is
