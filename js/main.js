@@ -361,9 +361,9 @@ function submit_survey() {
 			magazine: $('#magazine input:checked').val(),
 
 			major : $('#major').val(),
-			year : $('input[name=year]:checked').val(),
+			year : $('#selyear').val(),
 
-			campus : $('#campussel').val(),
+			campus : $('#campusselect').val(),
 			residence: $('#residence').val(),
 
 			// International student?
