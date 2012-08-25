@@ -431,7 +431,9 @@ function validation() {
 			}
 			break;
 		case 6:
-/*			if($('#fname').val() == ''){
+                        var phone = /^[\d\(\)-]{7,14}$/;
+                        var email = /^[\w.%-]+@[\w.-]+\.\w{2,5}$/;
+			if($('#fname').val() == ''){
 				$('#deterr').text('Enter your First Name');
 				$('#detail').fadeIn(200);
 				return false;
@@ -443,20 +445,24 @@ function validation() {
 				$('#deterr').text('Select your Gender');
 				$('#detail').fadeIn(200);
 				return false;
-			} else if($('#degree').val() == ''){
-				$('#deterr').text('Select your Degree');
+			} else if(!phone.test($('#cellphone').val())){
+				$('#deterr').text('Enter a valid cellphone number');
 				$('#detail').fadeIn(200);
 				return false;
-			} else if($('#major').val() == 'Select an area of study'){
-				$('#deterr').text('Select your Major');
+			} else if(!email.test($('#email').val())){
+				$('#deterr').text('Enter a valid email');
 				$('#detail').fadeIn(200);
 				return false;
-			} else if($('input[name=year]:checked').length == 0){
-				$('#deterr').text('Select your Year at Uni');
+			} else if($('#major').val() == ''){
+				$('#deterr').text('Enter your Faculty/Degree');
+				$('#detail').fadeIn(200);
+				return false;
+			} else if($('#selyear').val == ""){
+				$('#deterr').text('Select your Year in School');
 				$('#detail').fadeIn(200);
 				return false;
 			}
-*/			break;
+			break;
 		case 7:
 /*			var phone = /^[\d\(\)-]{7,14}$/;
 			if (!phone.test($('#cellphone').val())){
