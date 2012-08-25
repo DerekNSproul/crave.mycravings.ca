@@ -37,7 +37,10 @@ var base_url = "<?php echo base_url(); ?>";
       <div id="slider">
         <!--<div id="white"></div>-->
         <div id="cravemost-error" class="error">
-          <div class="msg"><strong>Forgetting something?</strong> Type into the box provided</div>
+          <div class="msg"><strong>Forgetting something?</strong> Please make a selection</div>
+        </div>
+        <div id="mag-error" class="error">
+          <div class="msg"><strong>Forgetting something?</strong> Please make a selection</div>
         </div>
 
         <div id="spirit" class="error">
@@ -163,6 +166,8 @@ var base_url = "<?php echo base_url(); ?>";
         <div id="magazine">
           <input type="radio" name="mag" value="spiritual connection" id="mag-spiritual" />
           <label for="mag-spiritual">spiritual connection</label>
+          <input type="radio" name="mag" value="no, thanks" id="mag-no" />
+          <label for="mag-no">no, thanks</label>
           <br />
           <input type="radio" name="mag" value="a real justice" id="mag-justice" />
           <label for="mag-justice">a real justice</label>
@@ -175,9 +180,6 @@ var base_url = "<?php echo base_url(); ?>";
           <br />
           <input type="radio" name="mag" value="achievement &amp; success" id="mag-success" />
           <label for="mag-success">achievement &amp; success</label>
-          <br />
-          <input type="radio" name="mag" value="no, thanks" id="mag-no" />
-          <label for="mag-no">no, thanks</label>
         </div>
         
         <div id="interest">
@@ -202,18 +204,23 @@ var base_url = "<?php echo base_url(); ?>";
         </div>
 
         <div id="you">
-          <textarea id="fname" placeholder="First Name" maxlength="17"></textarea>
-          <textarea id="lname" placeholder="Last Name" maxlength="17"></textarea>
+          <div class="half_field"><textarea id="fname" placeholder="First Name" maxlength="17"></textarea></div>
+          <div class="half_field"><textarea id="lname" placeholder="Last Name" maxlength="17"></textarea></div>
           <br />
-          <div id="gender"> <!-- ADDED Aug 7, 2012 -->
+          <div class="half_field">
+              <div id="gender"> 
 	          <input type="radio" id="male" name="gender" value="Male" />
 	          <label for="male">Male</label>
 	          <input type="radio" id="female" name="gender" value="Female" />
 	          <label for="female"> Female</label>
 	      </div>
-            <input type="text" id="email" placeholder="Email" name="email" value="" />
+          </div>
+          <div class="half_field"><textarea id="cellphone" placeholder="Cellphone" maxlength="15"></textarea></div>
+
+            <div class="full_field"><textarea id="email" placeholder="Email" name="email" maxlength="150"></textarea></div>
           <br />
-            <textarea id="cellphone" placeholder="Cellphone" maxlength="15"></textarea><select id="selyear" name="year">
+            <div class="half_field"><textarea id="major" name="major" placeholder="Faculty/Degree" maxlength="80"></textarea></div>
+            <div class="half_field"><select id="selyear" name="year">
             <option value="" selected="selected">Year of Study</option>
             <option value="First Year">First Year</option>
             <option value="Second Year">Second Year</option>
@@ -224,21 +231,15 @@ var base_url = "<?php echo base_url(); ?>";
             <option value="Doctoral">Doctoral</option>
             <option value="Faculty">Faculty</option>
             <option value="Other">Other</option>
-          </select>
+          </select></div>
           <br />
-            <!-- <label for="major">Faculty/Degree</label>
-          <textarea id="major" name="major" maxlength="80"></textarea> -->
-          <input type="checkbox" id="residencecheck" value="international student" /><label for="residencecheck">I live on Campus Residence</label>
-          <textarea id="residence" placeholder="Which Residence? (eg. Building)" name="residence" maxlength="80"></textarea>
+          <div class="half_field"><input type="checkbox" id="residencecheck" value="international student" /><label for="residencecheck"> I live on campus</label></div>
+          <div class="half_field"><textarea id="residence" placeholder="Which building?" name="residence" maxlength="80"></textarea></div>
           <br />
 
-          <input type="checkbox" id="international" value="international student" /><label for="international">I am an international student</label>
+          <div class="full_field"><input type="checkbox" id="international" value="international student" /><label for="international"> I am an international student</label></div>
         </div>
         
-        <div id="contact">
-            <label for="email" id="email-label"></label>
-        </div>
-
         <div id="cellphone_confirm">
           <input type="button" value="No, Change it" id="no_change" />
           <input type="button" value="Yes, Ready" id="yes_ready" />
@@ -255,7 +256,9 @@ var base_url = "<?php echo base_url(); ?>";
     <div id="reload" class="btn_footer">Reset Survey</div>
     <div id="resubmit" class="btn_footer">Retry Submission</div>
     <div id="reverify" class="btn_footer">Retry Verification</div>
-    <a id="terms">Terms and Conditions</a><span id="break"> | </span>Copyright &copy; <!--?php echo date('Y'); ?-->2012 Student Life </div>
+    Copyright &copy; <!--?php echo date('Y'); ?-->2012 Power to Change </div>
+    <div id="terms">By giving us your email or phone number you grant permisison to Power to Change Ministries to contact you based on the information you requested. Full details of our privacy policy are online at <a href="http://powertochange.com/organization/privacy-policy" target="_blank">powertochange.com/organization/privacy-policy</a></div>
 </div>
+
 </body>
 </html>

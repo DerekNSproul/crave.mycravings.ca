@@ -315,16 +315,20 @@ function move(advance, selection) {
 				$('#cellphone_confirm').hide();
 				break;
 			case 7:
-                $('#email').show();
+                //$('#email').show();
 				obj.stop().animate({left: -6650},500,function() {
 				});
+                                mode = 6;
+				$('#navstage').children().fadeOut(500);
+				$('#navleft, #navright').fadeOut(500);
+				$('#terms, #break').fadeOut();
+				submit_survey();
 				break;
 			case 8:
 				$('#cellphone').attr('disabled', true).stop().show();
             /*
 				$('#cellphone_confirm').children('input').stop().show();
 				$('#cellphone_confirm').fadeIn();
-            */
 				mode = 7;
 
 				$('#navstage').children().fadeOut(500);
@@ -332,6 +336,7 @@ function move(advance, selection) {
 				$('#terms, #break').fadeOut();
 				submit_survey();
 				break;
+            */
 		}
 	}
 }
@@ -392,27 +397,33 @@ function reset_page() {
 	move(true, true);	
 }
 function validation() {
-	return true; //DEBUG
+	//return true; //DEBUG
 	switch(mode)
 	{
 		case 2:
-/*			if ($('#cravemost input:checked').val() == '') {
+			if ($('#cravemost input:checked').val() == undefined) {
 				$('#cravemost-error').fadeIn(200);
 				return false;
 			}
-*/			break;
-		case 4:
-/*			if($('input[name=sj]:checked').length == 0){
-				$('#spirit').fadeIn(200);
+			break;
+		case 3:
+			if ($('#magazine input:checked').val() == undefined) {
+				$('#mag-error').fadeIn(200);
 				return false;
 			}
-*/			break;
-		case 5:
-/*			if($( "#interest-number" ).text() == '0'){
+			break;
+		case 4:
+			if($( "#interest-number" ).text() == '0'){
 				$('#slidererr').fadeIn(200);
 				return false;
 			}
-*/			break;
+			break;
+		case 5:
+			if($('input[name=sj]:checked').length == 0){
+				$('#spirit').fadeIn(200);
+				return false;
+			}
+			break;
 		case 6:
 /*			if($('#fname').val() == ''){
 				$('#deterr').text('Enter your First Name');
