@@ -377,7 +377,7 @@ function submit_survey() {
 }
 function finish() {
 	$('#right').hide();
-	obj.stop().animate({left: -7086},500);
+	//obj.stop().animate({left: -7086},500);
 	if (app) {
 		$('#white').hide();
 		setTimeout(reset_page, 5000);
@@ -457,7 +457,7 @@ function validation() {
 				$('#deterr').text('Enter your Faculty/Degree');
 				$('#detail').fadeIn(200);
 				return false;
-			} else if($('#selyear').val == ""){
+			} else if($('#selyear').val() == ''){
 				$('#deterr').text('Select your Year in School');
 				$('#detail').fadeIn(200);
 				return false;
