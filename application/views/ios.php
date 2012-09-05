@@ -1,3 +1,9 @@
+<?php
+$app = 'no';
+include("home.php");
+die();
+?>
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" manifest="ios.appcache">
 <head>
@@ -118,26 +124,18 @@ var base_url = "<?php echo base_url(); ?>";
   <div id="step_one_box" class="box">
             <div class="Question">The one thing I crave the most is...</div>
         <div id="cravemost">
-
-            <input type="radio" value="fun" name="cravemost" id="crave-fun" />
-                <label for="crave-fun">fun</label>
-
-            <input type="radio" value="relationship" name="cravemost" id="crave-relationship" />
-                <label for="crave-relationship">relationship</label>
-
-            <input type="radio" value="money" name="cravemost" id="crave-money" />
-                <label for="crave-money">money</label>
-
-            <input type="radio" value="good grades" name="cravemost" id="crave-grades" />
-                <label for="crave-grades">good grades</label>
-                
-            <input type="radio" value="" name="cravemost" id="crave-other" class="radio-other" />
-                <label for="crave-other">other
-                </label>
-                <input type="text" value="" placeholder="Specify" class="input-other" />
+            <select id="cravemost-select">
+                <option selected="selected" value="">Choose</option>
+                <option value="fun">fun</option>
+                <option value="relationship">relationship</option>
+                <option value="money">money</option>
+                <option value="good grades">good grades</option>
+                <option value="">other</option>
+            </select>
+                <input id="input-other" type="text" value="" placeholder="Specify" class="input-other" />
                 
         </div>
-    <a href="#step_two" data-role="button" data-icon="arrow-r" data-iconpos="right"  data-theme="b">Next Question</a></div>
+    <a id="crave_next" href="#step_two" data-role="button" data-icon="arrow-r" data-iconpos="right"  data-theme="b">Next Question</a></div>
   <div data-role="footer" class="ui-bar" data-position="fixed" data-id="rtc" data-theme="a"> <span style="float:right; margin-right:27px;">
     <input type="button" class="reset" disabled="disabled" data-icon="delete" data-iconpos="notext" />
     </span> <a href="#terms" data-icon="info" data-rel="dialog" data-iconpos="notext" data-role="button" class="info">Terms and Conditions</a> </div>

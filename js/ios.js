@@ -154,7 +154,33 @@ $(document).ready(function() {
 		else
 			$('#btn_submit').button('disable');
 	});
-	
+        
+        $('#input-other').hide();
+        $('#crave_next').button('disable');
+        
+        $('#cravemost-select').change(function() {
+            var en_crave_next = true;
+            var show_other = false;
+            
+            if($(this).val() == ''){
+                en_crave_next = false;
+            } else if ($(this).val() == 'other') {
+                show_other = true;
+                if ($('#input-other').val() == '') en_crave_next = false;
+                
+            }
+            if (en_crave_next) $('#crave_next').button('enable');
+            else $('#crave_next').button('disable');
+            
+            if (show_other) $('#input-other').show();
+            else $('#input-other').hide();
+            
+        });
+        
+	$('#input-other').keyup(function() {
+            if (($this).val() != '') $('#crave_next').button('enable');
+            else $('#crave_next').button('disable');
+        });
 });
 
 function numcheck() {
@@ -191,7 +217,7 @@ function submit_survey() {
 			email: $('#email').val(),
 			number : $('#cellphone').val(),
 
-			cravemost : $('#cravemost input:checked').val(),
+			cravemost : $('#cravemost-select').val(),
 			spiritual : $('#spiritual_journey input:checked').val(),
 			interest : $( "#interest-number" ).val(),
 			// Magazine name
@@ -206,8 +232,8 @@ function submit_survey() {
 			// International student?
 			international: $('#international').attr('checked') ? 'Yes' : 'No'
 		};
-        var mytable = '<table><tr><td>name</td><td>' + my_data.fname + ' ' + my_data.lname + '</td></tr><tr><td>Gender</td><td>' + my_data.gender + '</td></tr><tr><td>Email</td><td>' + my_data.email + '</td></tr><tr><td>Cellphone</td><td>' + my_data.number + '</td></tr><tr><td>Interest</td><td>' + my_data.interest + '</td></tr><tr><td>Spiritual</td><td>' + my_data.spiritual + '</td></tr><tr><td>Magazine</td><td>' + my_data.magazine + '</td></tr><tr><td>Faculty</td><td>' + my_data.major + '</td></tr><tr><td>Year</td><td>' + my_data.year + '</td></tr><tr><td>Campus</td><td>' + my_data.campus + '</td></tr><tr><td>Residence</td><td>' + my_data.residence + '</td></tr><tr><td>International</td><td>' + my_data.international + '</td></tr></table>';
-        $('#server-message-area').html(mytable);
+        //var mytable = '<table><tr><td>name</td><td>' + my_data.fname + ' ' + my_data.lname + '</td></tr><tr><td>Gender</td><td>' + my_data.gender + '</td></tr><tr><td>Email</td><td>' + my_data.email + '</td></tr><tr><td>Cellphone</td><td>' + my_data.number + '</td></tr><tr><td>Interest</td><td>' + my_data.interest + '</td></tr><tr><td>Spiritual</td><td>' + my_data.spiritual + '</td></tr><tr><td>Magazine</td><td>' + my_data.magazine + '</td></tr><tr><td>Faculty</td><td>' + my_data.major + '</td></tr><tr><td>Year</td><td>' + my_data.year + '</td></tr><tr><td>Campus</td><td>' + my_data.campus + '</td></tr><tr><td>Residence</td><td>' + my_data.residence + '</td></tr><tr><td>International</td><td>' + my_data.international + '</td></tr></table>';
+        //$('#server-message-area').html(mytable);
         
 	$.post(base_url + "index.php/api/journey/user", my_data
 		, function(data, status, request) {
