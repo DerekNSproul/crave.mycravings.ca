@@ -25,6 +25,26 @@ function abcd($s)
     return $answer;
 }
 
+function prntPost($field, $name, $bla)
+{
+    jdbg("$name : '" . $this->post($field) . "'");
+}
+
+function printPosts()
+{
+    prntPost('fname', 'First Name', 'required');
+    prntPost('lname', 'Last Name', 'required');
+    prntPost('cravemost', 'Craving', 'required');
+    prntPost('magazine', 'Magazine', 'required');
+    prntPost('spiritual', 'Spiritual Journey', 'required');
+    prntPost('interest', 'Interest', 'required');
+    prntPost('gender', 'Gender', 'required');
+    prntPost('major', 'Area of Study', 'required');	// CHANGE 'Area of Study' to 'Major'?
+    prntPost('campus', 'Campus', 'required|campus_validation');
+    prntPost('international', 'International', 'required');
+    prntPost('number', 'Phone', 'required');
+    prntPost('email', 'Email', 'required');
+}
 
 class Journey extends REST_Controller
 {
@@ -36,7 +56,8 @@ class Journey extends REST_Controller
     function user_post()
     {
     	
-
+//jdbg('----------------------------------------------');
+//jdbg('in user_post()');
 		$this->load->library('form_validation');
 		$this->form_validation->set_rules('fname', 'First Name', 'required');
 		$this->form_validation->set_rules('lname', 'Last Name', 'required');
@@ -51,8 +72,12 @@ class Journey extends REST_Controller
 		$this->form_validation->set_rules('number', 'Phone', 'required');
 		$this->form_validation->set_rules('email', 'Email', 'required');
 		
+//                $this->printPosts();
+                
 		if ($this->form_validation->run() == FALSE)
 		{
+//jdbg('validations failed!');
+                    
 			//failed
 			$this->response(validation_errors(), 400);
 		}
@@ -60,6 +85,7 @@ class Journey extends REST_Controller
 		{
 			//$this->load->model('Journey_data', '', TRUE);
 
+//jdbg('preparing data to send');
 			// For missionHub fields correspondance
 			$interestMap = array(
                 1 => '1)Not',
@@ -97,8 +123,8 @@ class Journey extends REST_Controller
                                 'gender' => $this->post('gender'),
                                 'campus' => $this->post('campus')
 			);
-jdbg('--------------------------');
-jdbg($this->post('email'));
+//jdbg('--------------------------');
+//jdbg($this->post('email'));
     /*                    
                         $this->tstflt('a', 'a', 'a');
                         $this->tstflt('a', 'a', 'b');
@@ -130,6 +156,29 @@ jdbg($this->post('email'));
 		}
         
     }
+    
+    
+    function prntPost($field, $name, $bla)
+    {
+        jdbg("$name : '" . $this->post($field) . "'");
+    }
+
+    function printPosts()
+    {
+        $this->prntPost('fname', 'First Name', 'required');
+        $this->prntPost('lname', 'Last Name', 'required');
+        $this->prntPost('cravemost', 'Craving', 'required');
+        $this->prntPost('magazine', 'Magazine', 'required');
+        $this->prntPost('spiritual', 'Spiritual Journey', 'required');
+        $this->prntPost('interest', 'Interest', 'required');
+        $this->prntPost('gender', 'Gender', 'required');
+        $this->prntPost('major', 'Area of Study', 'required');	// CHANGE 'Area of Study' to 'Major'?
+        $this->prntPost('campus', 'Campus', 'required|campus_validation');
+        $this->prntPost('international', 'International', 'required');
+        $this->prntPost('number', 'Phone', 'required');
+        $this->prntPost('email', 'Email', 'required');
+    }
+    
     
     function tstflt($q1, $q2, $q3)
     {
@@ -183,7 +232,7 @@ $q2 = abcd($gauge);
         else if ($magazine && ($gauge == 2) && $journey) {
             $followupPriority = 'Medium';
         }
-jdbg("$q1 $q2 $q3 : $followupPriority  \t $paramsfilter");
+//jdbg("$q1 $q2 $q3 : $followupPriority  \t $paramsfilter");
         return $followupPriority;
     }
 

@@ -21,9 +21,9 @@ $(document).live('pagebeforeshow', function(event) {
 	if (event.target.id == 'step_four') {
 		$('#studying').attr('checked','checked').checkboxradio('refresh');
 		$('.decheck').removeAttr('checked').checkboxradio('refresh');
-	} else if (event.target.id == 'step_five') {
+	} else if (event.target.id == 'step_four') {
 		$('input[name=sj]').attr('checked',false).checkboxradio('refresh');
-	} else if (event.target.id == 'step_six') {
+	} else if (event.target.id == 'step_three') {
 		$('#interest-number').children('option').attr('selected',false).first().attr('selected',true).parent().selectmenu('refresh');
 	} else if (event.target.id == 'step_seven') {
 		$('#gender, #major, #year, .halls').each(function() {
@@ -74,17 +74,17 @@ $(document).ready(function() {
 	
 	$('#coolest').keyup(function() {
 		if ($(this).val() != '')
-			$('#btn_coolest').button('enable');
+			$('#btn_interest').button('enable');
 		else
-			$('#btn_coolest').button('disable');
+			$('#btn_interest').button('disable');
 	});
 	
-	$('#btn_coolest').click(function() {
+	$('#btn_interest').click(function() {
 		$.mobile.changePage('#step_four');
 	});
 	
 	$('#btn_sj').click(function() {
-		$.mobile.changePage('#step_six');
+		$.mobile.changePage('#step_five');
 	});
 	
 	$('#btn_slider').click(function() {
@@ -92,12 +92,12 @@ $(document).ready(function() {
 	});
 	
 	$('#btn_data').click(function() {
-		$.mobile.changePage('#step_eight');
+		$.mobile.changePage('#step_five');
 	});
 	
 	$('#btn_submit').click(function() {
-		if(confirm('You\'re number is '+$('#cellphone').val()+' right?'))
-			numcheck();
+            $.mobile.changePage('#step_six');
+		submit_survey();
 	});
 	$('#btn_cell_retry').click(function() {
 		numcheck();
@@ -123,9 +123,9 @@ $(document).ready(function() {
 	
 	$('#interest-number').change(function() {
 		if ($('#interest-number').val() != 'Choose')
-			$('#btn_slider').button('enable');
+			$('#btn_interest').button('enable');
 		else
-			$('#btn_slider').button('disable');
+			$('#btn_interest').button('disable');
 	});
 	
 	$('#btn_unlock').click(function() {
@@ -173,7 +173,7 @@ function numcheck() {
 			$('#cellphone').val('');
 			$('#coolest').val('');
 		} else {
-			$.mobile.changePage('#step_nine');
+			$.mobile.changePage('#step_six');
 			submit_survey();
 		}
 	}, "json").error(function () {
@@ -183,30 +183,38 @@ function numcheck() {
 }
 
 function submit_survey() {
-	var halls = '';
-	if ($('.halls').val() != "Halls of Residence")
-		halls = $('.halls').val();
-	$.post(base_url + "index.php/api/journey/user",
-		{
+	var my_data = {
 			fname :$('#fname').val(),
 			lname :$('#lname').val(),
-			coolest : $('#coolest').val(),
-			journey : $('input[name=sj]:checked').val(),
-			interest : $( "#interest-number" ).val(),
-			gender : $('#gender').val(),
-			major : $('#major').val(),
-			year : $('#year').val(),
+			gender : $('#gender').val(),  //('input[name=gender]:checked').val(),
+
+			email: $('#email').val(),
 			number : $('#cellphone').val(),
+
+			cravemost : $('#cravemost input:checked').val(),
+			spiritual : $('#spiritual_journey input:checked').val(),
+			interest : $( "#interest-number" ).val(),
+			// Magazine name
+			magazine: $('#magazine input:checked').val(),
+
+			major : $('#major').val(),
+			year : $('#selyear').val(),
+
 			campus : $('#campussel').val(),
-			studying : $('#studying:checked').length,
-			relation : $('#relation:checked').length,
-			lifesqs : $('#lifesqs:checked').length,
-			sports : $('#sports:checked').length,
-			hall : halls
-		}, function(data, status, request) {
-			$.mobile.changePage('#step_ten');
+			residence: $('#residence').val(),
+
+			// International student?
+			international: $('#international').attr('checked') ? 'Yes' : 'No'
+		};
+        var mytable = '<table><tr><td>name</td><td>' + my_data.fname + ' ' + my_data.lname + '</td></tr><tr><td>Gender</td><td>' + my_data.gender + '</td></tr><tr><td>Email</td><td>' + my_data.email + '</td></tr><tr><td>Cellphone</td><td>' + my_data.number + '</td></tr><tr><td>Interest</td><td>' + my_data.interest + '</td></tr><tr><td>Spiritual</td><td>' + my_data.spiritual + '</td></tr><tr><td>Magazine</td><td>' + my_data.magazine + '</td></tr><tr><td>Faculty</td><td>' + my_data.major + '</td></tr><tr><td>Year</td><td>' + my_data.year + '</td></tr><tr><td>Campus</td><td>' + my_data.campus + '</td></tr><tr><td>Residence</td><td>' + my_data.residence + '</td></tr><tr><td>International</td><td>' + my_data.international + '</td></tr></table>';
+        $('#server-message-area').html(mytable);
+        
+	$.post(base_url + "index.php/api/journey/user", my_data
+		, function(data, status, request) {
+			$.mobile.changePage('#step_seven');
 	}, "json").error(function() {
 		$('#btn_retry').button('enable');
+                
 	});
 }
 
@@ -214,11 +222,13 @@ function data_check() {
 	if (
 		$('#fname').val() != '' &&
 		$('#lname').val() != '' &&
+		$('#cellphone').val() != '' &&
+		$('#email').val() != '' &&
 		$('#gender').val() != 'Gender' &&
 		$('#major').val() != 'Area of Study' &&
 		$('#year').val() != 'Year of Study'
 	)
-			$('#btn_data').button('enable');
+			$('#btn_submit').button('enable');
 		else
-			$('#btn_data').button('disable');
+			$('#btn_submit').button('disable');
 }
