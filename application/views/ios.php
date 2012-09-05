@@ -201,8 +201,8 @@ var base_url = "<?php echo base_url(); ?>";
                 <option value="Male">Male</option>
                 <option value="Female">Female</option>
             </select>
-          <input id="cellphone" name="cellphone" type="text" placeholder="Cellphone" value="" maxlength="15" />
-          <input id="email" name="email" type="text" placeholder="Email" value="" maxlength="150" />
+          <input id="cellphone" name="cellphone" type="tel" placeholder="Cellphone" value="" maxlength="15" />
+          <input id="email" name="email" type="email" placeholder="Email" value="" maxlength="150" />
         </div>
     <a id="btn_info" href="#step_six" data-role="button" data-icon="arrow-r" data-iconpos="right" data-theme="b">Next</a> </div>
   <div data-role="footer" class="ui-bar" data-position="fixed" data-id="rtc" data-theme="a"> <span style="float:right; margin-right:27px;">
