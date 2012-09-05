@@ -8,7 +8,7 @@ $(document).live('pagebeforeshow', function(event) {
 		$('#' + event.target.id + '_box .img img').width(defaultwidth);
 	} else {
 		var top = (-$(document).height()/3);
-		if(event.target.id == 'step_seven')
+		if(event.target.id == 'step_eight')
 			top = top + (top / 2);
 		$('#' + event.target.id + '_box').css({
 			'margin-top' : top + 'px',
@@ -19,17 +19,9 @@ $(document).live('pagebeforeshow', function(event) {
 		});
 	}
 	if (event.target.id == 'step_four') {
-		$('#studying').attr('checked','checked').checkboxradio('refresh');
-		$('.decheck').removeAttr('checked').checkboxradio('refresh');
-	} else if (event.target.id == 'step_four') {
-		$('input[name=sj]').attr('checked',false).checkboxradio('refresh');
 	} else if (event.target.id == 'step_three') {
 		$('#interest-number').children('option').attr('selected',false).first().attr('selected',true).parent().selectmenu('refresh');
-	} else if (event.target.id == 'step_seven') {
-		$('#gender, #major, #year, .halls').each(function() {
-			$(this).children('option').attr('selected',false).first().attr('selected',true).parent().selectmenu('refresh');
-		});
-	}
+	} 
 	$('#' + event.target.id + '_box input[type=button]').button().button('disable');
 });
 
@@ -87,16 +79,16 @@ $(document).ready(function() {
 		$.mobile.changePage('#step_five');
 	});
 	
-	$('#btn_slider').click(function() {
-		$.mobile.changePage('#step_seven');
-	});
-	
 	$('#btn_data').click(function() {
 		$.mobile.changePage('#step_five');
 	});
 	
+	$('#btn_info').click(function() {
+		$.mobile.changePage('#step_six');
+	});
+	
 	$('#btn_submit').click(function() {
-            $.mobile.changePage('#step_six');
+            $.mobile.changePage('#step_seven');
 		submit_survey();
 	});
 	$('#btn_cell_retry').click(function() {
@@ -113,14 +105,15 @@ $(document).ready(function() {
 		$('#cellphone').val('');
 		$('#coolest').val('');
 	});
-
-	$("input[name='sj']").change(function(){
-		if ($("input[name='sj']:checked").length != 0)
-			$('#btn_sj').button('enable');
-		else
+/*        
+        $('#btn_sj').button('disable');
+	$("#sj-select").change(function(){
+		if ($("#sj-select").val() == "")
 			$('#btn_sj').button('disable');
+		else
+			$('#btn_sj').button('enable');
 	});
-	
+*/	
 	$('#interest-number').change(function() {
 		if ($('#interest-number').val() != 'Choose')
 			$('#btn_interest').button('enable');
@@ -145,17 +138,17 @@ $(document).ready(function() {
 	$('#fname').keyup(data_check);
 	$('#lname').keyup(data_check);
 	$('#gender').change(data_check);
-	$('#major').change(data_check);
-	$('#year').change(data_check);
+	$('#major').change(data_check2);
+	$('#year').change(data_check2);
 	$('#cellphone').keyup(function() {
 		var phone = /^02\d{7,13}$/
 		if(phone.test($('#cellphone').val()))
-			$('#btn_submit').button('enable');
+			$('#btn_info').button('enable');
 		else
-			$('#btn_submit').button('disable');
+			$('#btn_info').button('disable');
 	});
         
-        $('#input-other').hide();
+/*       $('#input-other').hide();
         $('#crave_next').button('disable');
         
         $('#cravemost-select').change(function() {
@@ -181,6 +174,7 @@ $(document).ready(function() {
             if (($this).val() != '') $('#crave_next').button('enable');
             else $('#crave_next').button('disable');
         });
+*/
 });
 
 function numcheck() {
@@ -199,7 +193,7 @@ function numcheck() {
 			$('#cellphone').val('');
 			$('#coolest').val('');
 		} else {
-			$.mobile.changePage('#step_six');
+			$.mobile.changePage('#step_seven');
 			submit_survey();
 		}
 	}, "json").error(function () {
@@ -209,6 +203,9 @@ function numcheck() {
 }
 
 function submit_survey() {
+        var cravemost = $('#input-other').val();
+        if($('#cravemost-select').val() != 'other')cravemost = $('#cravemost-select').val();
+    
 	var my_data = {
 			fname :$('#fname').val(),
 			lname :$('#lname').val(),
@@ -217,11 +214,11 @@ function submit_survey() {
 			email: $('#email').val(),
 			number : $('#cellphone').val(),
 
-			cravemost : $('#cravemost-select').val(),
-			spiritual : $('#spiritual_journey input:checked').val(),
+			cravemost : cravemost,
+			spiritual : $('#sj-select').val(),
 			interest : $( "#interest-number" ).val(),
 			// Magazine name
-			magazine: $('#magazine input:checked').val(),
+			magazine: $('#magazine-select').val(),
 
 			major : $('#major').val(),
 			year : $('#selyear').val(),
@@ -237,7 +234,7 @@ function submit_survey() {
         
 	$.post(base_url + "index.php/api/journey/user", my_data
 		, function(data, status, request) {
-			$.mobile.changePage('#step_seven');
+			$.mobile.changePage('#step_eight');
 	}, "json").error(function() {
 		$('#btn_retry').button('enable');
                 
@@ -250,7 +247,15 @@ function data_check() {
 		$('#lname').val() != '' &&
 		$('#cellphone').val() != '' &&
 		$('#email').val() != '' &&
-		$('#gender').val() != 'Gender' &&
+		$('#gender').val() != 'Gender'
+	)
+			$('#btn_info').button('enable');
+		else
+			$('#btn_info').button('disable');
+}
+
+function data_check2() {
+	if (
 		$('#major').val() != 'Area of Study' &&
 		$('#year').val() != 'Year of Study'
 	)

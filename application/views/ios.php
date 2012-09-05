@@ -1,8 +1,3 @@
-<?php
-$app = 'no';
-include("home.php");
-die();
-?>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" manifest="ios.appcache">
@@ -132,7 +127,7 @@ var base_url = "<?php echo base_url(); ?>";
                 <option value="good grades">good grades</option>
                 <option value="">other</option>
             </select>
-                <input id="input-other" type="text" value="" placeholder="Specify" class="input-other" />
+                <input id="input-other" type="text" value="" placeholder="If other, please specify" class="input-other" />
                 
         </div>
     <a id="crave_next" href="#step_two" data-role="button" data-icon="arrow-r" data-iconpos="right"  data-theme="b">Next Question</a></div>
@@ -144,18 +139,15 @@ var base_url = "<?php echo base_url(); ?>";
   <div id="step_two_box" class="box">
       <div class="Question">I'd like a <strong>Free Magazine by Personal Delivery</strong> to help me explore my craving for...</div>
         <div id="magazine">
-          <input type="radio" name="mag" value="spiritual connection" id="mag-spiritual" />
-          <label for="mag-spiritual">spiritual connection</label>
-          <input type="radio" name="mag" value="a real justice" id="mag-justice" />
-          <label for="mag-justice">a real justice</label>
-          <input type="radio" name="mag" value="love without conditions" id="mag-love" />
-          <label for="mag-love">love without conditions</label>
-          <input type="radio" name="mag" value="escape from the dreariness of life" id="mag-escape" />
-          <label for="mag-escape">escape from the dreariness of life</label>
-          <input type="radio" name="mag" value="achievement &amp; success" id="mag-success" />
-          <label for="mag-success">achievement &amp; success</label>
-          <input type="radio" name="mag" value="no, thanks" id="mag-no" />
-          <label for="mag-no">no, thanks</label>
+            <select id="magazine-select">
+                <option selected="selected" value="">Choose</option>
+                <option value="spiritual connection">spiritual connection</option>
+                <option value="a real justice">a real justice</option>
+                <option value="love without conditions">love without conditions</option>
+                <option value="escape from the dreariness of life">escape from the dreariness of life</option>
+                <option value="achievement &amp; success">achievement &amp; success</option>
+                <option value="no, thanks">no, thanks</option>
+            </select>
         </div>
     <a href="#step_three" id="btn_who" data-role="button" data-icon="arrow-r" data-iconpos="right" data-theme="b">Next Question</a> </div>
   <div data-role="footer" class="ui-bar" data-position="fixed" data-id="rtc" data-theme="a"> <span style="float:right; margin-right:27px;">
@@ -184,16 +176,14 @@ var base_url = "<?php echo base_url(); ?>";
   <div id="step_four_box" class="box">
       <div class="Question">On my spiritual journey I'd like to...</div>
         <div id="spiritual_journey">
-          <input type="radio" id="options" name="sj" value="explore the deeper meaning of my cravings" />
-          <label for="options">explore the deeper meaning of my cravings</label>
-          <input type="radio" id="online" name="sj" value="get connected to online resources about my cravings" />
-          <label for="online">get connected to online resources about my cravings</label>
-          <input type="radio" id="hear" name="sj" value="hear more about Power to Change" />
-          <label for="hear">hear more about Power to Change</label>
-          <input type="radio" id="grow" name="sj" value="grow in my relationship with Jesus" />
-          <label for="grow">grow in my relationship with Jesus</label>
-          <input type="radio" id="nowhere" name="sj" value="do nothing right now" />
-          <label for="nowhere">do nothing right now</label>
+            <select id="sj-select">
+                <option selected="selected" value="">Choose</option>
+                <option value="explore the deeper meaning of my cravings">explore the deeper meaning of my cravings</option>
+                <option value="get connected to online resources about my cravings">get connected to online resources about my cravings</option>
+                <option value="hear more about Power to Change">hear more about Power to Change</option>
+                <option value="grow in my relationship with Jesus">grow in my relationship with Jesus</option>
+                <option value="do nothing right now">do nothing right now</option>
+            </select>
         </div>
     <a id="btn_sj" href="#step_five" data-role="button" data-icon="arrow-r" data-iconpos="right" data-theme="b">Next Question</a> </div>
   <div data-role="footer" class="ui-bar" data-position="fixed" data-id="rtc" data-theme="a"> <span style="float:right; margin-right:27px;">
@@ -202,8 +192,8 @@ var base_url = "<?php echo base_url(); ?>";
 </div>
 <div id="step_five" data-role="page">
   <div id="step_five_box" class="box">
-      <div class="Question">Tell us a little about yourself.</div>
-        <div id="you">
+      <div class="Question">Tell us a little about yourself. (1/2)</div>
+        <div>
             <input placeholder="First Name" type="text" name="fname" id="fname" value="" maxlength="20"  />
             <input placeholder="Last Name" type="text" name="lname" id="lname" value="" maxlength="20"  />
             <select id="gender">
@@ -213,6 +203,16 @@ var base_url = "<?php echo base_url(); ?>";
             </select>
           <input id="cellphone" name="cellphone" type="text" placeholder="Cellphone" value="" maxlength="15" />
           <input id="email" name="email" type="text" placeholder="Email" value="" maxlength="150" />
+        </div>
+    <a id="btn_info" href="#step_six" data-role="button" data-icon="arrow-r" data-iconpos="right" data-theme="b">Next</a> </div>
+  <div data-role="footer" class="ui-bar" data-position="fixed" data-id="rtc" data-theme="a"> <span style="float:right; margin-right:27px;">
+    <input type="button" class="reset" data-icon="delete" data-iconpos="notext" />
+    </span> <a href="#terms" data-icon="info" data-rel="dialog" data-iconpos="notext" data-role="button" class="info">Terms and Conditions</a> </div>
+</div>
+<div id="step_six" data-role="page">
+  <div id="step_six_box" class="box">
+      <div class="Question">Tell us a little about yourself. (2/2)</div>
+        <div>
           <input id="major" name="major" type="text" placeholder="Faculty/Degree" value="" maxlength="150" />
             <select id="selyear" name="year">
             <option value="" selected="selected">Year of Study</option>
@@ -237,8 +237,8 @@ var base_url = "<?php echo base_url(); ?>";
     <input type="button" class="reset" data-icon="delete" data-iconpos="notext" />
     </span> <a href="#terms" data-icon="info" data-rel="dialog" data-iconpos="notext" data-role="button" class="info">Terms and Conditions</a> </div>
 </div>
-<div id="step_six" data-role="page">
-  <div id="step_six_box" class="box">
+<div id="step_seven" data-role="page">
+  <div id="step_seven_box" class="box">
           <div class="Question">Communicating with the server, please wait...</div>
     <p id="server-message-area" ></p>
   </div>
@@ -247,8 +247,8 @@ var base_url = "<?php echo base_url(); ?>";
     <input type="button" id="btn_retry" disabled="disabled" data-icon="refresh" value="Retry" />
     </span></div>
 </div>
-<div id="step_seven" data-role="page">
-  <div id="step_seven_box" class="box">
+<div id="step_eight" data-role="page">
+  <div id="step_eight_box" class="box">
           <div class="Question">THANKS FOR SHARING YOUR CRAVINGS WITH US! </div>
   </div>
   <div data-role="footer" class="ui-bar" data-position="fixed" data-id="rtc" data-theme="a"> <span style="float:right; margin-right:27px;">
