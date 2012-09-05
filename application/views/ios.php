@@ -262,7 +262,7 @@ var base_url = "<?php echo base_url(); ?>";
   </div>
   <div data-role="content" id="content-box">
     <div id="tnc">
-      By giving us your email or phone number you grant permisison to Power to Change Ministries to contact you based on the information you requested. Full details of our privacy policy are online at <a href="powertochange.com/organization/privacy-policy">powertochange.com/organization/privacy-policy</a>      <p>Power to Change © 2012 All Rights Reserved.</p>
+      By giving us your email or phone number you grant permisison to Power to Change Ministries to contact you based on the information you requested. Full details of our privacy policy are online at <a href="http://powertochange.com/organization/privacy-policy">powertochange.com/organization/privacy-policy</a>      <p>Power to Change © 2012 All Rights Reserved.</p>
     </div>
   </div>
   <div data-role="footer" class="ui-bar" data-position="fixed" data-id="rtc" data-theme="a">
