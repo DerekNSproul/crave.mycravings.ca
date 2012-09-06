@@ -29,7 +29,7 @@ var base_url = "<?php echo base_url(); ?>";
   <div id="step_zero_box" class="box">
     <div class="img"><img src="img/ios/getstarted.png" width="460" /></div>
     <select id="campussel">
-                <option value="">Choose One</option>
+                <option value="" disabled="disabled" selected="selected">Choose One</option>
                 <option value="Acadia University - Wolfville">Acadia University - Wolfville</option>
                 <option value="Algonquin College">Algonquin College</option>
                 <option value="Bishops University - Lennoxville-Sherbrooke">Bishops University - Lennoxville-Sherbrooke</option>
@@ -70,6 +70,7 @@ var base_url = "<?php echo base_url(); ?>";
                 <option value="Sheridan College - Oakville">Sheridan College - Oakville</option>
                 <option value="Simon Fraser University">Simon Fraser University</option>
                 <option value="Simon Fraser University - Surrey">Simon Fraser University - Surrey</option>
+                <option value="Simon Fraser University - Vancouver">Simon Fraser University - Vancouver</option>
                 <option value="St. Francis Xavier - Antigonish">St. Francis Xavier - Antigonish</option>
                 <option value="Trent University">Trent University</option>
                 <option value="Trent University - Oshawa">Trent University - Oshawa</option>
@@ -120,7 +121,7 @@ var base_url = "<?php echo base_url(); ?>";
             <div class="Question">The one thing I crave the most is...</div>
         <div id="cravemost">
             <select id="cravemost-select">
-                <option value="">Choose</option>
+                <option disabled="disabled" selected="selected" value="">Choose</option>
                 <option value="fun">fun</option>
                 <option value="relationship">relationship</option>
                 <option value="money">money</option>
@@ -140,7 +141,7 @@ var base_url = "<?php echo base_url(); ?>";
       <div class="Question">I'd like a <strong>Free Magazine by Personal Delivery</strong> to help me explore my craving for...</div>
         <div id="magazine">
             <select id="magazine-select">
-                <option value="">Choose</option>
+                <option disabled="disabled" selected="selected" value="">Choose</option>
                 <option value="spiritual connection">spiritual connection</option>
                 <option value="a real justice">a real justice</option>
                 <option value="love without conditions">love without conditions</option>
@@ -159,7 +160,7 @@ var base_url = "<?php echo base_url(); ?>";
       <div class="Question"><strong>Power to Change</strong> loves to help students discover Jesus.<br /><br />
       How interested are you in having a chat about how to begin a journey with Jesus Christ?</div>
     <select id="interest-number">
-      <option value="">Choose</option>
+      <option disabled="disabled" selected="selected">Choose</option>
       <option value="1">1 - Not Interested</option>
       <option value="2">2 - Maybe Not</option>
       <option value="3">3 - Maybe</option>
@@ -177,7 +178,7 @@ var base_url = "<?php echo base_url(); ?>";
       <div class="Question">On my spiritual journey I'd like to...</div>
         <div id="spiritual_journey">
             <select id="sj-select">
-                <option value="">Choose</option>
+                <option disabled="disabled" selected="selected" value="">Choose</option>
                 <option value="explore the deeper meaning of my cravings">explore the deeper meaning of my cravings</option>
                 <option value="get connected to online resources about my cravings">get connected to online resources about my cravings</option>
                 <option value="hear more about Power to Change">hear more about Power to Change</option>
@@ -197,7 +198,7 @@ var base_url = "<?php echo base_url(); ?>";
             <input placeholder="First Name" type="text" name="fname" id="fname" value="" maxlength="20"  />
             <input placeholder="Last Name" type="text" name="lname" id="lname" value="" maxlength="20"  />
             <select id="gender">
-                <option value="">Gender</option>
+                <option disabled="disabled" selected="selected">Gender</option>
                 <option value="Male">Male</option>
                 <option value="Female">Female</option>
             </select>
@@ -215,7 +216,7 @@ var base_url = "<?php echo base_url(); ?>";
         <div>
           <input id="major" name="major" type="text" placeholder="Faculty/Degree" value="" maxlength="150" />
             <select id="selyear" name="year">
-            <option value="" selected="selected">Year of Study</option>
+            <option value="" disabled="disabled" selected="selected">Year of Study</option>
             <option value="First Year">First Year</option>
             <option value="Second Year">Second Year</option>
             <option value="Third Year">Third Year</option>
