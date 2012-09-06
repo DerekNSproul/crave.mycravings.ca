@@ -36,9 +36,10 @@ $(document).ready(function() {
 		$(this).css('background-size', $(this).css('width') + ' ' + $(this).css('height'));
 	});	
 	
-	$('#campussel').change(function() {
-            if ($('#campussel').val() != "") $('#btn_campus').button('enable');
-	});
+//	$('#campussel').change(function() {
+//            if ($('#campussel').val() != "") 
+                $('#btn_campus').button('enable');
+//	});
 	
 	
 	$('#btn_interest').click(function() {
