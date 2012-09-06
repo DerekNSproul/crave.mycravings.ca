@@ -112,7 +112,7 @@ var base_url = "<?php echo base_url(); ?>";
                 <option value="York University - Glendon">York University - Glendon</option>
                 <option value="Other">Other</option>
     </select>
-    <a href="#step_one" id="btn_campus" data-role="button" data-icon="arrow-r" data-iconpos="right"  data-theme="b">Next Question</a></div>
+    <a href="#step_one" id="btn_campus" data-role="button" data-icon="arrow-r" data-iconpos="right"  data-theme="b">Next Question</a>
   </div>
 </div>
 <div id="step_one" data-role="page">
@@ -166,7 +166,7 @@ var base_url = "<?php echo base_url(); ?>";
       <option value="4">4 - Yes</option>
       <option value="5">5 - Very Interested</option>
     </select>
-    <a href="#step_four" id="btn_interest" data-role="button" data-icon="arrow-r" data-iconpos="right" data-theme="b">Next Question</a> </div>
+    <a href="#step_four" id="btn_interest" data-role="button" data-icon="arrow-r" data-iconpos="right" data-theme="b">Next Question</a>
   </div>
   <div data-role="footer" class="ui-bar" data-position="fixed" data-id="rtc" data-theme="a"> <span style="float:right; margin-right:27px;">
     <input type="button" class="reset" data-icon="arrow-l" data-iconpos="notext" />
