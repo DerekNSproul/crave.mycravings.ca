@@ -48,29 +48,11 @@ div[data-role=page] {
 	background-color:#333333;
 }
 .Question {
-    width: 460px;
+    max-width: 460px;
     margin: 0 0 20px 0;
-    font-size: 22px;
+    font-size: 12pt;
 }
-#step_seven_box .ui-controlgroup {
-	padding:0;
-	margin:0;	
-}
-#step_seven_box .ui-btn-text {
-	font-size: 12px;
-}
-#step_seven_box .ui-btn-inner {
-	padding:.5em 10px;	
-}
-#step_seven_box .ui-select {
-	display:block !important;
-	width:100% !important;
-}
-#step_seven_box .ui-input-text {
-	display:block !important;
-	width:97% !important;
-	margin-bottom:5px;
-}
+
 #step_zero {
 	background:#000;	
 }
