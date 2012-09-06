@@ -14,12 +14,21 @@
 <title>Journey</title>
 <script type="text/javascript" src="js/jquery.js"></script>
 <script type="text/javascript" src="js/jquery.mobile-1.0.1.min.js"></script>
+<script type="text/javascript" src="js/modules/iscroll/iscroll.js"></script>
 <script type="text/javascript">
 document.ontouchmove = function(e) {
 	if($('.ui-page-active').attr('id') != 'terms')
 		e.preventDefault();
 	};
 var base_url = "<?php echo base_url(); ?>";
+
+var myScroll;
+function loaded() {
+    setTimeout(function (){ 
+        myScroll = new iScroll('step_six_box', { hScrollbar: false, vScrollbar: true }); 
+    }, 100);
+}
+window.addEventListener('load', loaded, false);
 </script>
 <script type="text/javascript" src="js/ios.js"></script>
 </head>
@@ -210,8 +219,8 @@ var base_url = "<?php echo base_url(); ?>";
     </span> <a href="#terms" data-icon="info" data-rel="dialog" data-iconpos="notext" data-role="button" class="info">Terms and Conditions</a> </div>
 </div>
 <div id="step_six" data-role="page">
-    <div class="scroll">
     <div id="step_six_box" class="box">
+    <div class="scroll">
       <div class="Question">Tell us a little about yourself. (2/2)</div>
         <div>
           <input id="major" name="major" type="text" placeholder="Faculty/Degree" value="" maxlength="150" />
