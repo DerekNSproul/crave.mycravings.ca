@@ -112,7 +112,7 @@ var base_url = "<?php echo base_url(); ?>";
                 <option value="York University - Glendon">York University - Glendon</option>
                 <option value="Other">Other</option>
     </select>
-    <input type="button" id="btn_campus" data-role="button" data-icon="arrow-r" data-iconpos="right" value="Next Question" disabled="disabled" data-theme="b" />
+    <input type="button" id="btn_campus" data-role="button" data-icon="arrow-r" data-iconpos="right" value="Next Question" data-theme="b" />
   </div>
 </div>
 <div id="step_one" data-role="page">
