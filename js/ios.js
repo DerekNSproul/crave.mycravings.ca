@@ -148,7 +148,7 @@ function data_check() {
 		$('#lname').val() != '' &&
 		phone.test($('#cellphone').val()) &&
 		$('#email').val() != '' &&
-		$('#gender').val() != 'Gender'
+		$('#gender').val() != ''
 	)
 			$('#btn_info').button('enable');
 		else
