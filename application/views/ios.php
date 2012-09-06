@@ -59,6 +59,7 @@ var base_url = "<?php echo base_url(); ?>";
                 <option value="Mohawk College">Mohawk College</option>
                 <option value="Mount Allison University">Mount Allison University</option>
                 <option value="Mount Royal University">Mount Royal University</option>
+                <option value="Mount Saint Vincent University">Mount Saint Vincent University</option>
                 <option value="Niagara College - Welland Campus">Niagara College - Welland Campus</option>
                 <option value="Nipissing University">Nipissing University</option>
                 <option value="Ontario College of Art &amp; Design">Ontario College of Art &amp; Design</option>
