@@ -220,7 +220,6 @@ window.addEventListener('load', loaded, false);
 </div>
 <div id="step_six" data-role="page">
     <div id="step_six_box" class="box">
-    <div class="scroll">
       <div class="Question">Tell us a little about yourself. (2/2)</div>
         <div>
           <input id="major" name="major" type="text" placeholder="Faculty/Degree" value="" maxlength="150" />
@@ -236,13 +235,11 @@ window.addEventListener('load', loaded, false);
             <option value="Faculty">Faculty</option>
             <option value="Other">Other</option>
           </select>
-          <br />
           <input type="checkbox" id="residencecheck" value="international student" /><label for="residencecheck"> I live on campus</label>
           <input id="residence" name="residence" type="text" placeholder="Which building?" value="" maxlength="80" />
           <input type="checkbox" id="international" value="international student" /><label for="international"> I am an international student</label>
         </div>
     <input type="button" id="btn_submit" data-role="button" data-icon="arrow-r" data-iconpos="right" value="Submit" data-theme="b" />
-      </div>
   </div>
   <div data-role="footer" class="ui-bar" data-position="fixed" data-id="rtc" data-theme="a"> <span style="float:right; margin-right:27px;">
     <input type="button" class="reset" data-icon="delete" data-iconpos="notext" />
