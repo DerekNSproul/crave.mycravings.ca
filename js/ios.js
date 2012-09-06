@@ -36,9 +36,9 @@ $(document).ready(function() {
 		$(this).css('background-size', $(this).css('width') + ' ' + $(this).css('height'));
 	});	
 	
-	$('#campussel').change(function() {
+//	$('#campussel').change(function() {
 		$('#btn_campus').button('enable');
-	});
+//	});
 	
 	$('#btn_campus').click(function() {
 		$.mobile.changePage('#step_one');
@@ -62,13 +62,6 @@ $(document).ready(function() {
 				$('#c_hall, #w_hall, #o_hall').remove();
 			break;
 		}
-	});
-	
-	$('#coolest').keyup(function() {
-		if ($(this).val() != '')
-			$('#btn_interest').button('enable');
-		else
-			$('#btn_interest').button('disable');
 	});
 	
 	$('#btn_interest').click(function() {
@@ -121,16 +114,6 @@ $(document).ready(function() {
 			$('#btn_interest').button('disable');
 	});
 	
-	$('#btn_unlock').click(function() {
-		$('#btn_cell_retry').button('disable');
-		$('#cellphone').attr('disabled',false);
-		var phone = /^02\d{7,13}$/
-		if(phone.test($('#cellphone').val()))
-			$('#btn_submit').button('enable');
-		else
-			$('#btn_submit').button('disable');
-	});
-	
 	$('#btn_cell_retry').click(function() {
 		
 	});
@@ -140,13 +123,7 @@ $(document).ready(function() {
 	$('#gender').change(data_check);
 	$('#major').change(data_check2);
 	$('#year').change(data_check2);
-	$('#cellphone').keyup(function() {
-		var phone = /^02\d{7,13}$/
-		if(phone.test($('#cellphone').val()))
-			$('#btn_info').button('enable');
-		else
-			$('#btn_info').button('disable');
-	});
+	$('#cellphone').keyup(data_check);
         
 /*       $('#input-other').hide();
         $('#crave_next').button('disable');
@@ -177,30 +154,6 @@ $(document).ready(function() {
 */
 });
 
-function numcheck() {
-	$('#btn_submit').button('disable');
-	$('#btn_unlock').button('disable');
-	$('#cellphone').attr('disabled',true);
-	$.post(base_url + 'index.php/api/journey/numcheck', {
-			num : $('#cellphone').val()
-	}, function(data) {
-		$('#cellphone').attr('disabled',false);
-		$('#btn_unlock').button('enable');
-		if(data.exists) {
-			alert('Sorry it seems you\'ve already got some Jandals! If this is wrong come see us at our tables.');
-			$.mobile.changePage('#step_one', { 'reverse' : true });
-			$('#fname, #lname').val('');
-			$('#cellphone').val('');
-			$('#coolest').val('');
-		} else {
-			$.mobile.changePage('#step_seven');
-			submit_survey();
-		}
-	}, "json").error(function () {
-		$('#btn_unlock').button('enable');
-		$('#btn_cell_retry').button('enable');
-	});
-}
 
 function submit_survey() {
         var cravemost = $('#input-other').val();
@@ -209,7 +162,7 @@ function submit_survey() {
 	var my_data = {
 			fname :$('#fname').val(),
 			lname :$('#lname').val(),
-			gender : $('#gender').val(),  //('input[name=gender]:checked').val(),
+			gender : $('#gender').val(),  
 
 			email: $('#email').val(),
 			number : $('#cellphone').val(),
@@ -242,10 +195,11 @@ function submit_survey() {
 }
 
 function data_check() {
+        var phone = /^02\d{7,13}$/
 	if (
 		$('#fname').val() != '' &&
 		$('#lname').val() != '' &&
-		$('#cellphone').val() != '' &&
+		phone.test($('#cellphone').val()) &&
 		$('#email').val() != '' &&
 		$('#gender').val() != 'Gender'
 	)
