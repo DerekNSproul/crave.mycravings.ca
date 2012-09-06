@@ -211,6 +211,7 @@ var base_url = "<?php echo base_url(); ?>";
 </div>
 <div id="step_six" data-role="page">
   <div id="step_six_box" class="box">
+      <div class="scroll">
       <div class="Question">Tell us a little about yourself. (2/2)</div>
         <div>
           <input id="major" name="major" type="text" placeholder="Faculty/Degree" value="" maxlength="150" />
@@ -232,6 +233,7 @@ var base_url = "<?php echo base_url(); ?>";
           <input type="checkbox" id="international" value="international student" /><label for="international"> I am an international student</label>
         </div>
     <input type="button" id="btn_submit" data-role="button" data-icon="arrow-r" data-iconpos="right" value="Submit" data-theme="b" />
+      </div>
   </div>
   <div data-role="footer" class="ui-bar" data-position="fixed" data-id="rtc" data-theme="a"> <span style="float:right; margin-right:27px;">
     <input type="button" class="reset" data-icon="delete" data-iconpos="notext" />
