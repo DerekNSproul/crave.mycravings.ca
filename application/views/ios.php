@@ -210,8 +210,8 @@ var base_url = "<?php echo base_url(); ?>";
     </span> <a href="#terms" data-icon="info" data-rel="dialog" data-iconpos="notext" data-role="button" class="info">Terms and Conditions</a> </div>
 </div>
 <div id="step_six" data-role="page">
-  <div id="step_six_box" class="box">
-      <div class="scroll">
+    <div class="scroll">
+    <div id="step_six_box" class="box">
       <div class="Question">Tell us a little about yourself. (2/2)</div>
         <div>
           <input id="major" name="major" type="text" placeholder="Faculty/Degree" value="" maxlength="150" />
