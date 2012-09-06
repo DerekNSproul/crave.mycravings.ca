@@ -11,24 +11,15 @@
 <link rel="stylesheet" media="screen" type="text/css" href="css/ios/main.css" />
 <link rel="stylesheet" media="only screen and (min-width:900px)" href="css/ios/ipad.css" />
 <link rel="stylesheet" href="css/ios/add2home.css">
-<title>Journey</title>
+<title>Cravings</title>
 <script type="text/javascript" src="js/jquery.js"></script>
 <script type="text/javascript" src="js/jquery.mobile-1.0.1.min.js"></script>
-<script type="text/javascript" src="js/modules/iscroll/iscroll.js"></script>
 <script type="text/javascript">
 document.ontouchmove = function(e) {
 	if($('.ui-page-active').attr('id') != 'terms')
 		e.preventDefault();
 	};
 var base_url = "<?php echo base_url(); ?>";
-
-var myScroll;
-function loaded() {
-    setTimeout(function (){ 
-        myScroll = new iScroll('step_six_box', { hScrollbar: false, vScrollbar: true }); 
-    }, 100);
-}
-window.addEventListener('load', loaded, false);
 </script>
 <script type="text/javascript" src="js/ios.js"></script>
 </head>
@@ -141,7 +132,7 @@ window.addEventListener('load', loaded, false);
         </div>
     <a id="crave_next" href="#step_two" data-role="button" data-icon="arrow-r" data-iconpos="right"  data-theme="b">Next Question</a></div>
   <div data-role="footer" class="ui-bar" data-position="fixed" data-id="rtc" data-theme="a"> <span style="float:right; margin-right:27px;">
-    <input type="button" class="reset" disabled="disabled" data-icon="delete" data-iconpos="notext" />
+    <input type="button" class="reset" disabled="disabled" data-icon="arrow-l" data-iconpos="notext" />
     </span> <a href="#terms" data-icon="info" data-rel="dialog" data-iconpos="notext" data-role="button" class="info">Terms and Conditions</a> </div>
 </div>
 <div id="step_two" data-role="page">
@@ -160,7 +151,7 @@ window.addEventListener('load', loaded, false);
         </div>
     <a href="#step_three" id="btn_who" data-role="button" data-icon="arrow-r" data-iconpos="right" data-theme="b">Next Question</a> </div>
   <div data-role="footer" class="ui-bar" data-position="fixed" data-id="rtc" data-theme="a"> <span style="float:right; margin-right:27px;">
-    <input type="button" class="reset" data-icon="delete" data-iconpos="notext" />
+    <input type="button" class="reset" data-icon="arrow-l" data-iconpos="notext" />
     </span> <a href="#terms" data-icon="info" data-rel="dialog" data-iconpos="notext" data-role="button" class="info">Terms and Conditions</a> </div>
 </div>
 <div id="step_three" data-role="page">
@@ -178,7 +169,7 @@ window.addEventListener('load', loaded, false);
     <input type="button" class="initial_disable" id="btn_interest" data-role="button" data-icon="arrow-r" data-iconpos="right" value="Next Question" disabled="disabled" data-theme="b" />
   </div>
   <div data-role="footer" class="ui-bar" data-position="fixed" data-id="rtc" data-theme="a"> <span style="float:right; margin-right:27px;">
-    <input type="button" class="reset" data-icon="delete" data-iconpos="notext" />
+    <input type="button" class="reset" data-icon="arrow-l" data-iconpos="notext" />
     </span> <a href="#terms" data-icon="info" data-rel="dialog" data-iconpos="notext" data-role="button" class="info">Terms and Conditions</a> </div>
 </div>
 <div id="step_four" data-role="page">
@@ -196,7 +187,7 @@ window.addEventListener('load', loaded, false);
         </div>
     <a id="btn_sj" href="#step_five" data-role="button" data-icon="arrow-r" data-iconpos="right" data-theme="b">Next Question</a> </div>
   <div data-role="footer" class="ui-bar" data-position="fixed" data-id="rtc" data-theme="a"> <span style="float:right; margin-right:27px;">
-    <input type="button" class="reset" data-icon="delete" data-iconpos="notext" />
+    <input type="button" class="reset" data-icon="arrow-l" data-iconpos="notext" />
     </span> <a href="#terms" data-icon="info" data-rel="dialog" data-iconpos="notext" data-role="button" class="info">Terms and Conditions</a> </div>
 </div>
 <div id="step_five" data-role="page">
@@ -215,7 +206,7 @@ window.addEventListener('load', loaded, false);
         </div>
     <a id="btn_info" href="#step_six" data-role="button" data-icon="arrow-r" data-iconpos="right" data-theme="b">Next</a> </div>
   <div data-role="footer" class="ui-bar" data-position="fixed" data-id="rtc" data-theme="a"> <span style="float:right; margin-right:27px;">
-    <input type="button" class="reset" data-icon="delete" data-iconpos="notext" />
+    <input type="button" class="reset" data-icon="arrow-l" data-iconpos="notext" />
     </span> <a href="#terms" data-icon="info" data-rel="dialog" data-iconpos="notext" data-role="button" class="info">Terms and Conditions</a> </div>
 </div>
 <div id="step_six" data-role="page">
@@ -242,7 +233,7 @@ window.addEventListener('load', loaded, false);
     <input type="button" id="btn_submit" data-role="button" data-icon="arrow-r" data-iconpos="right" value="Submit" data-theme="b" />
   </div>
   <div data-role="footer" class="ui-bar" data-position="fixed" data-id="rtc" data-theme="a"> <span style="float:right; margin-right:27px;">
-    <input type="button" class="reset" data-icon="delete" data-iconpos="notext" />
+    <input type="button" class="reset" data-icon="arrow-l" data-iconpos="notext" />
     </span> <a href="#terms" data-icon="info" data-rel="dialog" data-iconpos="notext" data-role="button" class="info">Terms and Conditions</a> </div>
 </div>
 <div id="step_seven" data-role="page">
@@ -260,7 +251,7 @@ window.addEventListener('load', loaded, false);
           <div class="Question">THANKS FOR SHARING YOUR CRAVINGS WITH US! </div>
   </div>
   <div data-role="footer" class="ui-bar" data-position="fixed" data-id="rtc" data-theme="a"> <span style="float:right; margin-right:27px;">
-    <input type="button" class="reset" data-icon="delete" data-iconpos="notext" />
+    <input type="button" class="reset" data-icon="arrow-l" data-iconpos="notext" />
     </span> <a href="#terms" data-icon="info" data-rel="dialog" data-iconpos="notext" data-role="button" class="info">Terms and Conditions</a> </div>
 </div>
 
