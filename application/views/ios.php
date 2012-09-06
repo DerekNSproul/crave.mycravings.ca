@@ -112,7 +112,7 @@ var base_url = "<?php echo base_url(); ?>";
                 <option value="York University - Glendon">York University - Glendon</option>
                 <option value="Other">Other</option>
     </select>
-    <input type="button" id="btn_campus" data-role="button" data-icon="arrow-r" data-iconpos="right" value="Next Question" data-theme="b" />
+    <a href="#step_one" id="btn_campus" data-role="button" data-icon="arrow-r" data-iconpos="right"  data-theme="b">Next Question</a></div>
   </div>
 </div>
 <div id="step_one" data-role="page">
@@ -130,7 +130,7 @@ var base_url = "<?php echo base_url(); ?>";
                 <input id="input-other" type="text" value="" placeholder="If other, please specify" class="input-other" />
                 
         </div>
-    <a id="crave_next" href="#step_two" data-role="button" data-icon="arrow-r" data-iconpos="right"  data-theme="b">Next Question</a></div>
+    <a href="#step_two" id="crave_next" data-role="button" data-icon="arrow-r" data-iconpos="right"  data-theme="b">Next Question</a></div>
   <div data-role="footer" class="ui-bar" data-position="fixed" data-id="rtc" data-theme="a"> <span style="float:right; margin-right:27px;">
     <input type="button" class="reset" disabled="disabled" data-icon="arrow-l" data-iconpos="notext" />
     </span> <a href="#terms" data-icon="info" data-rel="dialog" data-iconpos="notext" data-role="button" class="info">Terms and Conditions</a> </div>
@@ -166,7 +166,7 @@ var base_url = "<?php echo base_url(); ?>";
       <option value="4">4 - Yes</option>
       <option value="5">5 - Very Interested</option>
     </select>
-    <input type="button" class="initial_disable" id="btn_interest" data-role="button" data-icon="arrow-r" data-iconpos="right" value="Next Question" disabled="disabled" data-theme="b" />
+    <a href="#step_four" id="btn_interest" data-role="button" data-icon="arrow-r" data-iconpos="right" data-theme="b">Next Question</a> </div>
   </div>
   <div data-role="footer" class="ui-bar" data-position="fixed" data-id="rtc" data-theme="a"> <span style="float:right; margin-right:27px;">
     <input type="button" class="reset" data-icon="arrow-l" data-iconpos="notext" />

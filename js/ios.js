@@ -36,12 +36,14 @@ $(document).ready(function() {
 		$(this).css('background-size', $(this).css('width') + ' ' + $(this).css('height'));
 	});	
 	
-//	$('#campussel').change(function() {
-//            if ($('#campussel').val() != "") 
-                $('#btn_campus').button('enable');
-//	});
-	
-	
+/*	$('#btn_campus').click(function() {
+		$.mobile.changePage('#step_one');
+	});
+        
+	$('#crave_next').click(function() {
+		$.mobile.changePage('#step_two');
+	});
+        
 	$('#btn_interest').click(function() {
 		$.mobile.changePage('#step_four');
 	});
@@ -57,13 +59,10 @@ $(document).ready(function() {
 	$('#btn_info').click(function() {
 		$.mobile.changePage('#step_six');
 	});
-	
+*/	
 	$('#btn_submit').click(function() {
             $.mobile.changePage('#step_seven');
 		submit_survey();
-	});
-	$('#btn_cell_retry').click(function() {
-		numcheck();
 	});
 	$('#btn_retry').click(function() {
 		$('#btn_retry').button('disable');
@@ -92,9 +91,6 @@ $(document).ready(function() {
 			$('#btn_interest').button('disable');
 	});
 	
-	$('#btn_cell_retry').click(function() {
-		
-	});
 	
 	$('#fname').keyup(data_check);
 	$('#lname').keyup(data_check);
@@ -103,33 +99,6 @@ $(document).ready(function() {
 	$('#year').change(data_check2);
 	$('#cellphone').keyup(data_check);
         
-/*       $('#input-other').hide();
-        $('#crave_next').button('disable');
-        
-        $('#cravemost-select').change(function() {
-            var en_crave_next = true;
-            var show_other = false;
-            
-            if($(this).val() == ''){
-                en_crave_next = false;
-            } else if ($(this).val() == 'other') {
-                show_other = true;
-                if ($('#input-other').val() == '') en_crave_next = false;
-                
-            }
-            if (en_crave_next) $('#crave_next').button('enable');
-            else $('#crave_next').button('disable');
-            
-            if (show_other) $('#input-other').show();
-            else $('#input-other').hide();
-            
-        });
-        
-	$('#input-other').keyup(function() {
-            if (($this).val() != '') $('#crave_next').button('enable');
-            else $('#crave_next').button('disable');
-        });
-*/
 });
 
 
