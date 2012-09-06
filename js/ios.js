@@ -36,33 +36,10 @@ $(document).ready(function() {
 		$(this).css('background-size', $(this).css('width') + ' ' + $(this).css('height'));
 	});	
 	
-//	$('#campussel').change(function() {
-		$('#btn_campus').button('enable');
-//	});
-	
-	$('#btn_campus').click(function() {
-		$.mobile.changePage('#step_one');
-		
-		if ($('#campussel').val() != "Auckland" && $('#campussel').val() != "Otago" && $('#campussel').val() != "Canterbury") {
-			$('#sports').css('display', 'none');
-			$('label[for=sports]').remove();
-		}
-		
-		switch ($('#campussel').val()) {
-			case 'Waikato':
-				$('#c_hall, #o_hall').remove();
-			break;
-			case 'Canterbury':
-				$('#w_hall, #o_hall').remove();
-			break;
-			case 'Otago':
-				$('#c_hall, #w_hall').remove();
-			break;
-			default:
-				$('#c_hall, #w_hall, #o_hall').remove();
-			break;
-		}
+	$('#campussel').change(function() {
+            if ($('#campussel').val() != "") $('#btn_campus').button('enable');
 	});
+	
 	
 	$('#btn_interest').click(function() {
 		$.mobile.changePage('#step_four');
