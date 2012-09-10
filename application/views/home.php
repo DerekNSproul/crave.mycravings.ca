@@ -169,23 +169,25 @@ var base_url = "<?php echo base_url(); ?>";
         </div>
         
         <div id="magazine">
-          <input type="radio" name="mag" value="spiritual connection" id="mag-spiritual" />
-          <label for="mag-spiritual">spiritual connection</label>
-          <input type="radio" name="mag" value="no, thanks" id="mag-no" />
-          <label for="mag-no">no, thanks</label>
-          <br />
-          <input type="radio" name="mag" value="a real justice" id="mag-justice" />
-          <label for="mag-justice">a real justice</label>
-          <br />
-          <input type="radio" name="mag" value="love without conditions" id="mag-love" />
-          <label for="mag-love">love without conditions</label>
-          <br />
-          <input type="radio" name="mag" value="escape from the dreariness of life" id="mag-escape" />
-          <label for="mag-escape">escape from the dreariness of life</label>cravemost
-          <br />
-          <input type="radio" name="mag" value="achievement &amp; success" id="mag-success" />
-          <label for="mag-success">achievement &amp; success</label>
-        </div>
+            <table>
+                <tr>
+                    <td><input type="radio" name="mag" value="spiritual connection" id="mag-spiritual" /><label for="mag-spiritual">spiritual connection</label></td>
+                    <td><input type="radio" name="mag" value="a real justice" id="mag-justice" /><label for="mag-justice">a real justice</label></td>
+                </tr>
+                <tr>
+                    <td><input type="radio" name="mag" value="achievement &amp; success" id="mag-success" /><label for="mag-success">achievement &amp; success</label></td>
+                    <td><input type="radio" name="mag" value="love without conditions" id="mag-love" /><label for="mag-love">love without conditions</label></td>
+                </tr>
+                <tr>
+                    <td><input type="radio" name="mag" value="escape from the dreariness of life" id="mag-escape" /><label for="mag-escape">escape from the dreariness of life</label></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td><input type="radio" name="mag" value="no, thanks" id="mag-no" /><label for="mag-no">no, thanks</label></td>
+                    <td></td>
+                </tr>
+            </table>
+         </div>
         
         <div id="interest">
           <div id="jslide"></div>
@@ -262,7 +264,7 @@ var base_url = "<?php echo base_url(); ?>";
     <div id="resubmit" class="btn_footer">Retry Submission</div>
     <div id="reverify" class="btn_footer">Retry Verification</div>
     Copyright &copy; <!--?php echo date('Y'); ?-->2012 Power to Change </div>
-    <div id="terms">By giving us your email or phone number you grant permisison to Power to Change Ministries to contact you based on the information you requested. Full details of our privacy policy are online at <a href="http://powertochange.com/organization/privacy-policy" target="_blank">powertochange.com/organization/privacy-policy</a></div>
+    <div id="terms">By giving us your email or phone number you grant permission to Power to Change Ministries to contact you based on the information you requested. Full details of our privacy policy are online at <a href="http://powertochange.com/organization/privacy-policy" target="_blank">powertochange.com/organization/privacy-policy</a></div>
 </div>
 
 </body>

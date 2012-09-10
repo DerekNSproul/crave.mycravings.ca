@@ -6,7 +6,7 @@ $(document).ready(function() {
 		
 	});
 	
-	$('input, select, #jslide').hide();
+	$('input, select, #jslide, #terms').hide();
 	for (i=4;i>=1;i--)
 	{
 		$('#navstage').prepend('<div class="navcounter">'+i+'</div>');
@@ -100,7 +100,7 @@ $(document).ready(function() {
 		move(true, false);
 	});
 	$('#navleft').click(function() {
-		if(mode > 2)
+		if(mode > 1)
 			move(false, false);
 	}).mouseenter(function() {
 		if(mode > 2)
@@ -126,7 +126,7 @@ $(document).ready(function() {
 
 function move(advance, selection) {
 	
-	if (validation()) {
+	if (validation() || !advance) {
 		if (!selection) {
 			if (advance) {
 				if (mode > 1) {
@@ -153,7 +153,6 @@ function move(advance, selection) {
 				obj.stop().animate({left: 0},500);
 				break;
 			case 1:
-				$('#navleft').stop().fadeOut();
 				$("#campusbox select").show();
 				$('#stagename').text('Your Campus');
 				obj.stop().animate({left: -950},500);
@@ -161,7 +160,6 @@ function move(advance, selection) {
 				break;
 			case 2:
 			 // The one thing I crave most is
-				$('#navleft').stop().fadeOut();
 				$("#cravemost input").show();
 				$('#cravemost').stop().show();
 				$('#stagename').text('Crave Most');
@@ -191,7 +189,6 @@ function move(advance, selection) {
 				break;
 			case 6:
 				$('#navstage').children().fadeOut();
-				$('#navleft').stop().fadeOut();
 				obj.stop().animate({left: -5700},500,function() {
 					$('#name').focus();
 				});
@@ -203,6 +200,7 @@ function move(advance, selection) {
 				$('#cellphone, #yes_ready, #no_change').stop().show();
 				$('#cellphone').attr('disabled', false);
 				$('#cellphone_confirm').hide();
+                                $('#terms').stop().show();
 				break;
 			case 7:
                 //$('#email').show();
