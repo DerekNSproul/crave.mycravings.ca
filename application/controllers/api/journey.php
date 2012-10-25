@@ -114,10 +114,10 @@ class Journey extends REST_Controller
 			);
 			
 			$person = array (
-				'firstName' => ucwords(strtolower($this->post('fname'))),
-				'lastName' => ucwords(strtolower($this->post('lname'))),
+				'first_name' => ucwords(strtolower($this->post('fname'))),
+				'last_name' => ucwords(strtolower($this->post('lname'))),
 				'email' => $this->post('email'),
-                                'yearInSchool' => $this->post('year'), 
+                                'year_in_school' => $this->post('year'), 
 				'phone_number' => $this->post('number'),
                                 'major' => $this->post('major'),
                                 'gender' => $this->post('gender'),
