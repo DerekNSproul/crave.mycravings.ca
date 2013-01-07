@@ -104,6 +104,7 @@ var base_url = "<?php echo base_url(); ?>";
                 <option value="Simon Fraser University - Surrey">Simon Fraser University - Surrey</option>
                 <option value="Simon Fraser University - Vancouver">Simon Fraser University - Vancouver</option>
                 <option value="St. Francis Xavier - Antigonish">St. Francis Xavier - Antigonish</option>
+                <option value="St. Thomas University">St. Thomas University</option>
                 <option value="Trent University">Trent University</option>
                 <option value="Trent University - Oshawa">Trent University - Oshawa</option>
                 <option value="Trinity Western University">Trinity Western University</option>
