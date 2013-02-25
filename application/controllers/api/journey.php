@@ -4,7 +4,7 @@ require APPPATH.'/libraries/REST_Controller.php';
 
 function jdbg($s)
 {
-    $fp = fopen('/home/jacques/logs/journey_log.txt', 'a');
+    $fp = fopen('/tmp/journey_log.txt', 'a');
     fwrite($fp, $s . "\n");
     fclose($fp);
 }
@@ -55,9 +55,8 @@ class Journey extends REST_Controller
 	
     function user_post()
     {
-    	
-//jdbg('----------------------------------------------');
-//jdbg('in user_post()');
+        //jdbg('----------------------------------------------');
+        //jdbg('in user_post()');
 		$this->load->library('form_validation');
 		$this->form_validation->set_rules('fname', 'First Name', 'required');
 		$this->form_validation->set_rules('lname', 'Last Name', 'required');
@@ -72,12 +71,11 @@ class Journey extends REST_Controller
 		$this->form_validation->set_rules('number', 'Phone', 'required');
 		$this->form_validation->set_rules('email', 'Email', 'required');
 		
-//                $this->printPosts();
+        //$this->printPosts();
                 
 		if ($this->form_validation->run() == FALSE)
 		{
-//jdbg('validations failed!');
-                    
+            //jdbg('validations failed!');
 			//failed
 			$this->response(validation_errors(), 400);
 		}
@@ -85,75 +83,33 @@ class Journey extends REST_Controller
 		{
 			//$this->load->model('Journey_data', '', TRUE);
 
-//jdbg('preparing data to send');
-			// For missionHub fields correspondance
-			$interestMap = array(
-                1 => '1)Not',
-                2 => '2)',
-                3 => '3)Maybe',
-                4 => '4)',
-                5 => '5)Very',
-			);
-			$interest = $this->post('interest');
-			if ( isset($interestMap[$interest]) ) {
-                $interest = $interestMap[$interest];
-			}
-                        
-			$answers = array(
-				3539 => $this->post('cravemost'), 
-				3540 => $this->post('magazine'),
-				3542 => $this->post('spiritual'),
-				3541 => $interest, 
-				//2523 => $this->post('major'),
-				//6 => $this->post('year'), 
-				3545 => $this->post('residence'), 
-				3547 => $this->post('international'),
-				//3549 => $this->post('gender'), 
-				3548 => $this->post('campus'),
-				4260 => $this->filter($this->post('spiritual'), $this->post('magazine'), $interest),
-				5140 => $this->post('notes')
-			);
-			
-			$person = array (
-				'first_name' => ucwords(strtolower($this->post('fname'))),
-				'last_name' => ucwords(strtolower($this->post('lname'))),
-				'email' => $this->post('email'),
-                                'year_in_school' => $this->post('year'), 
-				'phone_number' => $this->post('number'),
-                                'major' => $this->post('major'),
-                                'gender' => $this->post('gender'),
-                                'campus' => $this->post('campus')
-			);
-//jdbg('--------------------------');
-//jdbg($this->post('email'));
-    /*                    
-                        $this->tstflt('a', 'a', 'a');
-                        $this->tstflt('a', 'a', 'b');
-                        $this->tstflt('b', 'a', 'a');
-                        $this->tstflt('a', 'b', 'a');
-                        $this->tstflt('a', 'b', 'b');
-                        $this->tstflt('a', 'c', 'a');
-                        $this->tstflt('b', 'b', 'a');
-                        $this->tstflt('b', 'b', 'b');
-                        $this->tstflt('b', 'c', 'a');
-                        $this->tstflt('b', 'c', 'b');
-                        $this->tstflt('b', 'a', 'b');
-                        $this->tstflt('a', 'd', 'a');
-                        $this->tstflt('a', 'd', 'b');
-                        $this->tstflt('a', 'c', 'b');
-                        $this->tstflt('b', 'd', 'a');
-                        $this->tstflt('b', 'd', 'b');
-	*/			
-			//$this->load->model('Journey_data', '', TRUE);
-   			$this->response(
-   						$this->mhub_create(
-				   							$person, 
-				   							$answers, 
-				   							($this->post('data') != false)
-										), 
-						200
-					); // 200 being the HTTP response code
-			//$this->response($returnable, 200); // 200 being the HTTP response code
+            //jdbg('preparing data to send');
+            $interest = "guage-" . $this->post('interest');
+            $year = "";
+            $yearOther = "";
+            if(strpos($this->post('year'), 'z') === 0){
+                $yearOther = substr($this->post('year'), 1);
+            }
+            else {
+                $year = $this->post('year');
+            }
+
+
+            $params = array(
+                "Contact" => array("first_name" => $this->post('fname'), "last_name" => $this->post('lname'), "gender_id" => $this->post('gender'),
+                    "first_name" => $this->post('fname'), "custom_57" => $year, "custom_58" => $yearOther,
+                    "custom_59" => $this->post('major'), "custom_60" => $this->post('residence'), "custom_61" => $this->post('international')),
+                "Email" => array("email" => $this->post('email')),
+                "Phone" => array("phone" => $this->post('number')),
+                "School" => array("contact_id_b" => $this->post('campus')),
+                "Survey" => array("custom_64" => $this->post('cravemost'), "custom_65" => $this->post('magazine'), "custom_66" => $interest,
+                    "custom_67" => $this->post('spiritual'), "custom_120" => 'Web App')
+            );
+
+            //jdbg(var_export($params, true));
+            $this->load->library(array('curl','rest'));
+            $message = $this->rest->post('http://localhost/~cwarkent/survey.mycravings.ca/extern.php', $params);
+            //jdbg(var_export($message, true));
 		}
         
     }

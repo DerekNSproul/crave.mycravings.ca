@@ -255,7 +255,7 @@ function submit_survey() {
 			residence: $('#residence').val(),
 
 			// International student?
-			international: $('#international').attr('checked') ? 'Yes' : 'No'
+			international: $('#international').attr('checked') ? 'yes' : 'no'
 
 		}, function(data, status, request) {
 			finish();
