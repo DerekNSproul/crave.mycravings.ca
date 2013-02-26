@@ -85,6 +85,8 @@ class Journey extends REST_Controller
 
             //jdbg('preparing data to send');
             $interest = "guage-" . $this->post('interest');
+
+            //Deal with year
             $year = "";
             $yearOther = "";
             if(strpos($this->post('year'), 'z') === 0){
@@ -92,6 +94,16 @@ class Journey extends REST_Controller
             }
             else {
                 $year = $this->post('year');
+            }
+
+            //Deal with warmup question
+            $crave = "";
+            $craveOther = "";
+            if(strpos($this->post('cravemost'), 'warmup') === 0){
+                $crave = $this->post('cravemost');
+            }
+            else {
+                $craveOther = $this->post('cravemost');
             }
 
 
@@ -102,8 +114,8 @@ class Journey extends REST_Controller
                 "Email" => array("email" => $this->post('email')),
                 "Phone" => array("phone" => $this->post('number')),
                 "School" => array("contact_id_b" => $this->post('campus')),
-                "Survey" => array("custom_64" => $this->post('cravemost'), "custom_65" => $this->post('magazine'), "custom_66" => $interest,
-                    "custom_67" => $this->post('spiritual'), "custom_120" => 'Web App')
+                "Survey" => array("custom_64" => $crave, "custom_65" => $this->post('magazine'), "custom_66" => $interest,
+                    "custom_67" => $this->post('spiritual'), "custom_126" => $craveOther, "custom_120" => 'Web App')
             );
 
             //jdbg(var_export($params, true));
