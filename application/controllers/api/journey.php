@@ -120,7 +120,7 @@ class Journey extends REST_Controller
 
             //jdbg(var_export($params, true));
             $this->load->library(array('curl','rest'));
-            $message = $this->rest->post('http://localhost/~cwarkent/survey.mycravings.ca/extern.php', $params);
+            $message = $this->rest->post('http://survey.mycravings.ca/extern.php', $params);
             //jdbg(var_export($message, true));
 		}
         
