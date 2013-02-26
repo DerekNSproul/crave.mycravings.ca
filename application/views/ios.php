@@ -29,91 +29,91 @@ var base_url = "<?php echo base_url(); ?>";
   <div id="step_zero_box" class="box">
     <div class="img"><img src="img/ios/getstarted.png" width="460" /></div>
     <select id="campussel">
-                <option value="" disabled="disabled" selected="selected">Choose One</option>
-                <option value="Acadia University - Wolfville">Acadia University - Wolfville</option>
-                <option value="Algonquin College">Algonquin College</option>
-                <option value="Bishops University - Lennoxville-Sherbrooke">Bishops University - Lennoxville-Sherbrooke</option>
-                <option value="Brock University">Brock University</option>
-                <option value="Carleton University">Carleton University</option>
-                <option value="Cégep François-Xavier-Garneau">Cégep François-Xavier-Garneau</option>
-                <option value="Cégep St. Lawrence">Cégep St. Lawrence</option>
-                <option value="Cégep St. Limoilou">Cégep St. Limoilou</option>
-                <option value="Cégep Ste-Foy">Cégep Ste-Foy</option>
-                <option value="Centennial College">Centennial College</option>
-                <option value="College of the Rockies">College of the Rockies</option>
-                <option value="Concordia University">Concordia University</option>
-                <option value="Conestoga College">Conestoga College</option>
-                <option value="Dalhousie University">Dalhousie University</option>
-                <option value="Cégep Dawson">Dawson College</option>
-                <option value="Fanshawe College">Fanshawe College</option>
-                <option value="George Brown College">George Brown College</option>
-                <option value="Grant MacEwan University">Grant MacEwan University</option>
-                <option value="Humber College">Humber College</option>
-                <option value="Lakehead University">Lakehead University</option>
-                <option value="Lakehead University - Orillia">Lakehead University - Orillia</option>
-                <option value="Langara College">Langara College</option>
-                <option value="Laurentian University - Sudbury">Laurentian University - Sudbury</option>
-                <option value="McGill University">McGill University</option>
-                <option value="McMaster University">McMaster University</option>
-                <option value="Memorial University">Memorial University</option>
-                <option value="Mohawk College">Mohawk College</option>
-                <option value="Mount Allison University">Mount Allison University</option>
-                <option value="Mount Royal University">Mount Royal University</option>
-                <option value="Mount Saint Vincent University">Mount Saint Vincent University</option>
-                <option value="Niagara College - Welland Campus">Niagara College - Welland Campus</option>
-                <option value="Nipissing University">Nipissing University</option>
-                <option value="Ontario College of Art &amp; Design">Ontario College of Art &amp; Design</option>
-                <option value="Queen's University">Queen's University</option>
-                <option value="Ryerson University">Ryerson University</option>
-                <option value="Saint Mary's University">Saint Mary's University</option>
-                <option value="Seneca College">Seneca College</option>
-                <option value="Sheridan College - Brampton">Sheridan College - Brampton</option>
-                <option value="Sheridan College - Oakville">Sheridan College - Oakville</option>
-                <option value="Simon Fraser University">Simon Fraser University</option>
-                <option value="Simon Fraser University - Surrey">Simon Fraser University - Surrey</option>
-                <option value="Simon Fraser University - Vancouver">Simon Fraser University - Vancouver</option>
-                <option value="St. Francis Xavier - Antigonish">St. Francis Xavier - Antigonish</option>
-                <option value="St. Thomas University">St. Thomas University</option>
-                <option value="Trent University">Trent University</option>
-                <option value="Trent University - Oshawa">Trent University - Oshawa</option>
-                <option value="Trinity Western University">Trinity Western University</option>
-                <option value="Universite de Montreal">Universite de Montreal</option>
-                <option value="Universite de Sherbrooke">Universite de Sherbrooke</option>
-                <option value="Universite du Quebec">Universite du Quebec</option>
-                <option value="Université du Québec à Montréal">Université du Québec à Montréal</option>
-                <option value="Université du Québec à Rimouski">Université du Québec à Rimouski</option>
-                <option value="Université du Québec à Trois-Rivières">Université du Québec à Trois-Rivières</option>
-                <option value="Université du Québec en Outaouais">Université du Québec en Outaouais</option>
-                <option value="Universite Laval">Universite Laval</option>
-                <option value="University of Alberta">University of Alberta</option>
-                <option value="University of Alberta - Augustana">University of Alberta - Augustana</option>
-                <option value="University of Alberta - Faculty Saint-Jean">University of Alberta - Faculty Saint-Jean</option>
-                <option value="University of British Columbia">University of British Columbia</option>
-                <option value="University of British Columbia - Okanagan">University of British Columbia - Okanagan</option>
-                <option value="University of Calgary">University of Calgary</option>
-                <option value="University of Guelph">University of Guelph</option>
-                <option value="University of Manitoba">University of Manitoba</option>
-                <option value="University of New Brunswick - Fredericton">University of New Brunswick - Fredericton</option>
-                <option value="University of New Brunswick - Saint John">University of New Brunswick - Saint John</option>
-                <option value="University of Ontario Institute of Technology">University of Ontario Institute of Technology</option>
-                <option value="University of Ottawa">University of Ottawa</option>
-                <option value="University of Regina">University of Regina</option>
-                <option value="University of Saskatchewan">University of Saskatchewan</option>
-                <option value="University of the Fraser Valley">University of the Fraser Valley</option>
-                <option value="University of Toronto">University of Toronto</option>
-                <option value="University of Toronto - Mississauga">University of Toronto - Mississauga</option>
-                <option value="University of Toronto - Scarbourough">University of Toronto - Scarbourough</option>
-                <option value="University of Victoria">University of Victoria</option>
-                <option value="University of Waterloo">University of Waterloo</option>
-                <option value="University of Waterloo School of Pharmacy">University of Waterloo School of Pharmacy</option>
-                <option value="University of Western Ontario">University of Western Ontario</option>
-                <option value="University of Windsor">University of Windsor</option>
-                <option value="University of Winnipeg">University of Winnipeg</option>
-                <option value="Wilfrid Laurier University">Wilfrid Laurier University</option>
-                <option value="Wilfrid Laurier University - Brantford">Wilfrid Laurier University - Brantford</option>
-                <option value="York University">York University</option>
-                <option value="York University - Glendon">York University - Glendon</option>
-                <option value="Other">Other</option>
+        <option value="" selected="selected">Choose One</option>
+        <option value="30413">Acadia University - Wolfville</option>
+        <option value="30414">Algonquin College</option>
+        <option value="30415">Bishops University - Lennoxville-Sherbrooke</option>
+        <option value="18">Brock University</option>
+        <option value="19">Carleton University</option>
+        <option value="4867">Cégep François-Xavier-Garneau</option>
+        <option value="22459">Cégep St. Lawrence</option>
+        <option value="30416">Cégep St. Limoilou</option>
+        <option value="22457">Cégep Ste-Foy</option>
+        <option value="22469">Centennial College</option>
+        <option value="50">College of the Rockies</option>
+        <option value="47">Concordia University</option>
+        <option value="30417">Conestoga College</option>
+        <option value="29">Dalhousie University</option>
+        <option value="30418">Dawson College</option>
+        <option value="48">Fanshawe College</option>
+        <option value="22466">George Brown College</option>
+        <option value="22465">Grant MacEwan University</option>
+        <option value="22467">Humber College</option>
+        <option value="54">Lakehead University</option>
+        <option value="30419">Lakehead University - Orillia</option>
+        <option value="22470">Langara College</option>
+        <option value="30420">Laurentian University - Sudbury</option>
+        <option value="39">McGill University</option>
+        <option value="20">McMaster University</option>
+        <option value="30421">Memorial University</option>
+        <option value="22472">Mohawk College</option>
+        <option value="49">Mount Allison University</option>
+        <option value="30408">Mount Royal University</option>
+        <option value="38329">Mount Saint Vincent University</option>
+        <option value="30422">Niagara College - Welland Campus</option>
+        <option value="30423">Nipissing University</option>
+        <option value="4954">Ontario College of Art &amp; Design</option>
+        <option value="21">Queen's University</option>
+        <option value="36">Ryerson University</option>
+        <option value="34">Saint Mary's University</option>
+        <option value="22468">Seneca College</option>
+        <option value="30424">Sheridan College - Brampton</option>
+        <option value="51">Sheridan College - Oakville</option>
+        <option value="12">Simon Fraser University</option>
+        <option value="5451">Simon Fraser University - Surrey</option>
+        <option value="38028">Simon Fraser University - Vancouver</option>
+        <option value="30425">St. Francis Xavier - Antigonish</option>
+        <option value="56987">St. Thomas University</option>
+        <option value="52">Trent University</option>
+        <option value="30426">Trent University - Oshawa</option>
+        <option value="56">Trinity Western University</option>
+        <option value="40">Universite de Montreal</option>
+        <option value="42">Universite de Sherbrooke</option>
+        <option value="41">Universite du Quebec</option>
+        <option value="30129">Université du Québec à Montréal</option>
+        <option value="30409">Université du Québec à Rimouski</option>
+        <option value="30428">Université du Québec à Trois-Rivières</option>
+        <option value="30427">Université du Québec en Outaouais</option>
+        <option value="43">Universite Laval</option>
+        <option value="13">University of Alberta</option>
+        <option value="22462">University of Alberta - Augustana</option>
+        <option value="17443">University of Alberta - Faculty Saint-Jean</option>
+        <option value="14">University of British Columbia</option>
+        <option value="22471">University of British Columbia - Okanagan</option>
+        <option value="15">University of Calgary</option>
+        <option value="22">University of Guelph</option>
+        <option value="16">University of Manitoba</option>
+        <option value="53">University of New Brunswick - Fredericton</option>
+        <option value="22460">University of New Brunswick - Saint John</option>
+        <option value="57">University of Ontario Institute of Technology</option>
+        <option value="23">University of Ottawa</option>
+        <option value="44">University of Regina</option>
+        <option value="17">University of Saskatchewan</option>
+        <option value="30429">University of the Fraser Valley</option>
+        <option value="37">University of Toronto</option>
+        <option value="4871">University of Toronto - Mississauga</option>
+        <option value="17387">University of Toronto - Scarbourough</option>
+        <option value="24">University of Victoria</option>
+        <option value="25">University of Waterloo</option>
+        <option value="30410">University of Waterloo School of Pharmacy</option>
+        <option value="26">University of Western Ontario</option>
+        <option value="38">University of Windsor</option>
+        <option value="30430">University of Winnipeg</option>
+        <option value="27">Wilfrid Laurier University</option>
+        <option value="30411">Wilfrid Laurier University - Brantford</option>
+        <option value="28">York University</option>
+        <option value="22415">York University - Glendon</option>
+        <option value="30412">Other</option>
     </select>
     <a href="#step_one" id="btn_campus" data-role="button" data-icon="arrow-r" data-iconpos="right"  data-theme="b">Next Question</a>
   </div>
@@ -124,10 +124,10 @@ var base_url = "<?php echo base_url(); ?>";
         <div id="cravemost">
             <select id="cravemost-select">
                 <option disabled="disabled" selected="selected" value="">Choose</option>
-                <option value="fun">fun</option>
-                <option value="relationship">relationship</option>
-                <option value="money">money</option>
-                <option value="good grades">good grades</option>
+                <option value="warmup-fun">fun</option>
+                <option value="warmup-relationship">relationship</option>
+                <option value="warmup-money">money</option>
+                <option value="warmup-grades">good grades</option>
                 <option value="">other</option>
             </select>
                 <input id="input-other" type="text" value="" placeholder="If other, please specify" class="input-other" />
@@ -144,12 +144,12 @@ var base_url = "<?php echo base_url(); ?>";
         <div id="magazine">
             <select id="magazine-select">
                 <option disabled="disabled" selected="selected" value="">Choose</option>
-                <option value="spiritual connection">spiritual connection</option>
-                <option value="a real justice">a real justice</option>
-                <option value="love without conditions">love without conditions</option>
-                <option value="escape from the dreariness of life">escape from the dreariness of life</option>
-                <option value="achievement &amp; success">achievement &amp; success</option>
-                <option value="no, thanks">no, thanks</option>
+                <option value="magazine-spiritual">spiritual connection</option>
+                <option value="magazine-justice">a real justice</option>
+                <option value="magazine-love">love without conditions</option>
+                <option value="magazine-escape">escape from the dreariness of life</option>
+                <option value="magazine-success">achievement &amp; success</option>
+                <option value="magazine-no">no, thanks</option>
             </select>
         </div>
     <a href="#step_three" id="btn_who" data-role="button" data-icon="arrow-r" data-iconpos="right" data-theme="b">Next Question</a> </div>
@@ -181,11 +181,11 @@ var base_url = "<?php echo base_url(); ?>";
         <div id="spiritual_journey">
             <select id="sj-select">
                 <option disabled="disabled" selected="selected" value="">Choose</option>
-                <option value="explore the deeper meaning of my cravings">explore the deeper meaning of my cravings</option>
-                <option value="get connected to online resources about my cravings">get connected to online resources about my cravings</option>
-                <option value="hear more about Power to Change">hear more about Power to Change</option>
-                <option value="grow in my relationship with Jesus">grow in my relationship with Jesus</option>
-                <option value="do nothing right now">do nothing right now</option>
+                <option value="journey-explore">explore the deeper meaning of my cravings</option>
+                <option value="journey-online">get connected to online resources about my cravings</option>
+                <option value="journey-p2c">hear more about Power to Change</option>
+                <option value="journey-grow">grow in my relationship with Jesus</option>
+                <option value="journey-nothing">do nothing right now</option>
             </select>
         </div>
     <a id="btn_sj" href="#step_five" data-role="button" data-icon="arrow-r" data-iconpos="right" data-theme="b">Next Question</a> </div>
@@ -201,8 +201,8 @@ var base_url = "<?php echo base_url(); ?>";
             <input placeholder="Last Name" type="text" name="lname" id="lname" value="" maxlength="20"  />
             <select id="gender">
                 <option disabled="disabled" selected="selected">Gender</option>
-                <option value="Male">Male</option>
-                <option value="Female">Female</option>
+                <option value="2">Male</option>
+                <option value="1">Female</option>
             </select>
           <input id="cellphone" name="cellphone" type="tel" placeholder="Cellphone" value="" maxlength="15" />
           <input id="email" name="email" type="email" placeholder="Email" value="" maxlength="150" />
@@ -219,19 +219,19 @@ var base_url = "<?php echo base_url(); ?>";
           <input id="major" name="major" type="text" placeholder="Faculty/Degree" value="" maxlength="150" />
             <select id="selyear" name="year">
             <option value="" disabled="disabled" selected="selected">Year of Study</option>
-            <option value="First Year">First Year</option>
-            <option value="Second Year">Second Year</option>
-            <option value="Third Year">Third Year</option>
-            <option value="Fourth Year">Fourth Year</option>
-            <option value="Fifth Year">Fifth Year</option>
-            <option value="Graduate">Graduate</option>
-            <option value="Doctoral">Doctoral</option>
-            <option value="Faculty">Faculty</option>
-            <option value="Other">Other</option>
+            <option value="1">First Year</option>
+            <option value="2">Second Year</option>
+            <option value="3">Third Year</option>
+            <option value="4">Fourth Year</option>
+            <option value="5">Fifth Year</option>
+            <option value="grad">Graduate</option>
+            <option value="zDoctoral">Doctoral</option>
+            <option value="zFaculty">Faculty</option>
+            <option value="zOther">Other</option>
           </select>
           <input type="checkbox" id="residencecheck" value="international student" /><label for="residencecheck"> I live on campus</label>
           <input id="residence" name="residence" type="text" placeholder="Which building?" value="" maxlength="80" />
-          <input type="checkbox" id="international" value="international student" /><label for="international"> I am an international student</label>
+          <input type="checkbox" id="international" value="yes" /><label for="international"> I am an international student</label>
         </div>
     <input type="button" id="btn_submit" data-role="button" data-icon="arrow-r" data-iconpos="right" value="Submit" data-theme="b" />
   </div>
