@@ -203,8 +203,8 @@ $q2 = abcd($gauge);
 			$message = $this->rest->post('https://www.missionhub.com/oauth/access_token',
 			array (
 				'grant_type' => 'none',
-				'client_id' => '9',
-				'client_secret' => 'f6ffd7ec1f97569b5abaf981630f201db4ee1784112882004a57bc615e5ca436'
+				'client_id' => '',
+				'client_secret' => ''
 			));
 			
 			$this->access_token = $message->access_token;
