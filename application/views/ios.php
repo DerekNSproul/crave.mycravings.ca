@@ -35,6 +35,7 @@ var base_url = "<?php echo base_url(); ?>";
         <option value="30415">Bishops University - Lennoxville-Sherbrooke</option>
         <option value="18">Brock University</option>
         <option value="19">Carleton University</option>
+        <option value="57077">Cégep Champlain - Saint Lambert</option>
         <option value="4867">Cégep François-Xavier-Garneau</option>
         <option value="22459">Cégep St. Lawrence</option>
         <option value="30416">Cégep St. Limoilou</option>
