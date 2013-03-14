@@ -109,7 +109,7 @@ class Journey extends REST_Controller
 
             $params = array(
                 "Contact" => array("first_name" => $this->post('fname'), "last_name" => $this->post('lname'), "gender_id" => $this->post('gender'),
-                    "custom_57" => $year, "custom_58" => $yearOther, "custom_59" => $this->post('major'),
+                    "custom_57" => $year, "custom_58" => $yearOther, "custom_59" => $this->post('major'), "source" => "crave.mycravings.ca",
                     "custom_60" => $this->post('residence'), "custom_61" => $this->post('international')),
                 "Email" => array("email" => $this->post('email')),
                 "Phone" => array("phone" => $this->post('number')),
