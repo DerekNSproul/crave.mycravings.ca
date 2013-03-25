@@ -1,6 +1,7 @@
 <?php defined('BASEPATH') OR exit('No direct script access allowed');
 
 require APPPATH.'/libraries/REST_Controller.php';
+require APPPATH.'/config/civi.php';
 
 function jdbg($s)
 {
@@ -108,6 +109,7 @@ class Journey extends REST_Controller
 
 
             $params = array(
+                "externpass" => CIVIKEY,
                 "Contact" => array("first_name" => $this->post('fname'), "last_name" => $this->post('lname'), "gender_id" => $this->post('gender'),
                     "custom_57" => $year, "custom_58" => $yearOther, "custom_59" => $this->post('major'), "source" => "crave.mycravings.ca",
                     "custom_60" => $this->post('residence'), "custom_61" => $this->post('international')),
@@ -120,7 +122,7 @@ class Journey extends REST_Controller
 
             //jdbg(var_export($params, true));
             $this->load->library(array('curl','rest'));
-            $message = $this->rest->post('http://survey.mycravings.ca/extern.php', $params);
+            $message = $this->rest->post(CIVIURL, $params);
             //jdbg(var_export($message, true));
 		}
         
